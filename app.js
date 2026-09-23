@@ -1,4 +1,4 @@
-// dawn4 Interactive Features & Multilingual Engine (KO / EN)
+// dawn4 Interactive Features, Multilingual Engine (KO / EN) & Formspree Integration
 
 const translations = {
   ko: {
@@ -91,12 +91,34 @@ const translations = {
     step3_title: "dawn4 공식 런칭 & 글로벌 모닝 커뮤니티",
     step3_desc: "iOS 및 Android 앱 공식 스토어 출시, 글로벌 사일런트 메이트 네트워크 확장 및 AI 루틴 코칭 고도화.",
 
-    // Contact
-    contact_title: "새벽을 바꾸는 여정에 함께하세요",
-    contact_desc: `dawn4와의 비즈니스 파트너십, 투자, 채용 및 기타 문의사항은<br class="hidden sm:inline" /> 아래 공식 이메일 채널을 통해 언제든 연락해 주시기 바랍니다.`,
+    // Partnership Form & Contact (Formspree)
+    form_badge: "PARTNERSHIP INQUIRY",
+    form_title: "제휴 및 비즈니스 문의",
+    form_desc: `dawn4와 함께 새로운 모닝 라이프 생태계를 만들어갈 파트너사를 모십니다.<br class="hidden sm:inline" /> 아래 양식을 작성해 주시면 담당자 검토 후 신속하게 연락드리겠습니다.`,
+    form_label_company: "회사 / 기관명",
+    form_placeholder_company: "예: (주)새벽연구소",
+    form_label_name: "담당자 성함 및 직함",
+    form_placeholder_name: "예: 홍길동 팀장",
+    form_label_email: "이메일 주소",
+    form_label_phone: "연락처 (선택)",
+    form_placeholder_phone: "010-1234-5678",
+    form_label_category: "제휴 유형",
+    form_opt_biz: "비즈니스 및 서비스 협업",
+    form_opt_content: "콘텐츠 및 마케팅 제휴",
+    form_opt_b2b: "기업 웰니스 / B2B 솔루션 도입",
+    form_opt_investment: "투자 및 IR 문의",
+    form_opt_other: "기타 제휴 문의",
+    form_label_message: "제휴 제안 내용",
+    form_placeholder_message: "제휴 목적 및 구체적인 제안 내용을 간략히 적어주세요.",
+    form_btn_submit: "제휴 제안 보내기",
+    form_btn_sending: "전송 중...",
+    form_success_title: "문의가 성공적으로 전달되었습니다!",
+    form_success_desc: "소중한 제안 감사드립니다. dawn4 담당자가 검토 후 남겨주신 이메일로 빠르게 회신드리겠습니다.",
+    form_error_msg: "전송 중 오류가 발생했습니다. 잠시 후 다시 시도하시거나 contact@dawn4.com으로 직접 메일을 보내주세요.",
+    form_alt_contact: "직접 이메일로 문의:",
     btn_copy_email: "이메일 복사",
     btn_copied: "복사 완료!",
-    contact_note: "* 사전 예약 및 서비스 신청 폼은 추후 프로덕트 공개 시점에 별도 오픈됩니다.",
+    contact_note: "* 사전 예약 및 일반 서비스 신청은 추후 프로덕트 공개 시점에 별도 오픈됩니다.",
 
     // Footer
     footer_tagline: "The Miracle Morning Life-Tech Company",
@@ -206,9 +228,31 @@ const translations = {
     step3_title: "Official Public Launch & Global Community",
     step3_desc: "Official App Store & Play Store launch, global silent network expansion, and advanced AI routine coaching.",
 
-    // Contact
-    contact_title: "Join Us in Transforming the Dawn",
-    contact_desc: `For business partnerships, investor relations, recruitment, and general inquiries,<br class="hidden sm:inline" /> please reach out via our official email channel.`,
+    // Partnership Form & Contact (Formspree)
+    form_badge: "PARTNERSHIP INQUIRY",
+    form_title: "Partnership & Business Inquiries",
+    form_desc: `We welcome partners ready to pioneer the next morning lifestyle ecosystem with dawn4.<br class="hidden sm:inline" /> Please submit your inquiry below, and our team will get back to you promptly.`,
+    form_label_company: "Company / Organization",
+    form_placeholder_company: "e.g., Acme Corp",
+    form_label_name: "Contact Name & Title",
+    form_placeholder_name: "e.g., Jane Doe, Head of Growth",
+    form_label_email: "Business Email",
+    form_label_phone: "Phone Number (Optional)",
+    form_placeholder_phone: "+1 555-0199",
+    form_label_category: "Inquiry Type",
+    form_opt_biz: "Business & Service Collaboration",
+    form_opt_content: "Content & Marketing Partnership",
+    form_opt_b2b: "Corporate Wellness / B2B Solution",
+    form_opt_investment: "Investment & IR Inquiries",
+    form_opt_other: "Other Inquiries",
+    form_label_message: "Proposal Details",
+    form_placeholder_message: "Please briefly describe your proposal and collaboration ideas.",
+    form_btn_submit: "Submit Inquiry",
+    form_btn_sending: "Sending...",
+    form_success_title: "Inquiry Sent Successfully!",
+    form_success_desc: "Thank you for reaching out. The dawn4 team will review your proposal and get back to you promptly.",
+    form_error_msg: "An error occurred while sending. Please try again later or contact us directly at contact@dawn4.com.",
+    form_alt_contact: "Or contact directly via email:",
     btn_copy_email: "Copy Email",
     btn_copied: "Copied!",
     contact_note: "* Pre-registration and service sign-up forms will open upon product unveiling.",
@@ -261,6 +305,14 @@ window.changeLanguage = function(lang) {
     const key = el.getAttribute('data-i18n-html');
     if (translations[lang][key] !== undefined) {
       el.innerHTML = translations[lang][key];
+    }
+  });
+
+  // Placeholder attributes
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    if (translations[lang][key] !== undefined) {
+      el.setAttribute('placeholder', translations[lang][key]);
     }
   });
 
@@ -399,6 +451,61 @@ document.addEventListener('DOMContentLoaded', () => {
   // Clock updates every second
   updateDawnClock();
   setInterval(updateDawnClock, 1000);
+
+  // Formspree Partnership Form Handling (AJAX)
+  const partnershipForm = document.getElementById('partnershipForm');
+  const formSubmitBtn = document.getElementById('formSubmitBtn');
+  const submitBtnText = document.getElementById('submitBtnText');
+  const formSuccessAlert = document.getElementById('formSuccessAlert');
+  const formErrorAlert = document.getElementById('formErrorAlert');
+
+  if (partnershipForm && formSubmitBtn && submitBtnText) {
+    partnershipForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // UI state: submitting
+      formSubmitBtn.disabled = true;
+      formSubmitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+      submitBtnText.textContent = translations[currentLang].form_btn_sending;
+
+      if (formSuccessAlert) formSuccessAlert.classList.add('hidden');
+      if (formErrorAlert) formErrorAlert.classList.add('hidden');
+
+      try {
+        const formData = new FormData(partnershipForm);
+        const response = await fetch(partnershipForm.action, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          partnershipForm.reset();
+          if (formSuccessAlert) {
+            formSuccessAlert.classList.remove('hidden');
+            formSuccessAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }
+          if (window.lucide) {
+            window.lucide.createIcons();
+          }
+        } else {
+          if (formErrorAlert) {
+            formErrorAlert.classList.remove('hidden');
+          }
+        }
+      } catch (err) {
+        if (formErrorAlert) {
+          formErrorAlert.classList.remove('hidden');
+        }
+      } finally {
+        formSubmitBtn.disabled = false;
+        formSubmitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+        submitBtnText.textContent = translations[currentLang].form_btn_submit;
+      }
+    });
+  }
 
   // Copy Email Functionality
   const copyBtn = document.getElementById('copyEmailBtn');

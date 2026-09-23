@@ -569,35 +569,173 @@
       </div>
     </section>
 
-    <!-- Contact & Business Inquiries -->
+    <!-- Contact & Partnership Inquiries (Formspree) -->
     <section id="contact" class="py-24 px-6 border-t border-white/[0.06]">
       <div class="max-w-4xl mx-auto">
-        <div class="p-10 sm:p-14 rounded-3xl bg-gradient-to-br from-dawn-850 via-dawn-900 to-dawn-950 border border-white/[0.1] text-center relative overflow-hidden shadow-2xl">
+        <div class="p-8 sm:p-14 rounded-3xl bg-gradient-to-br from-dawn-850 via-dawn-900 to-dawn-950 border border-white/[0.1] relative overflow-hidden shadow-2xl">
           <div class="ambient-glow top-0 right-10 bg-amber-500/10 w-80 h-80 rounded-full blur-[100px] pointer-events-none"></div>
 
-          <div class="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-amber-400 mb-6">
-            <i data-lucide="mail" class="w-7 h-7"></i>
+          <!-- Section Heading -->
+          <div class="text-center max-w-2xl mx-auto mb-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20 mb-4">
+              <i data-lucide="handshake" class="w-3.5 h-3.5"></i>
+              <span data-i18n="form_badge">PARTNERSHIP INQUIRY</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4 tracking-tight" data-i18n="form_title">
+              제휴 및 비즈니스 문의
+            </h2>
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed" data-i18n-html="form_desc">
+              dawn4와 함께 새로운 모닝 라이프 생태계를 만들어갈 파트너사를 모십니다.<br class="hidden sm:inline" />
+              아래 양식을 작성해 주시면 담당자 검토 후 신속하게 연락드리겠습니다.
+            </p>
           </div>
 
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4 tracking-tight" data-i18n="contact_title">
-            새벽을 바꾸는 여정에 함께하세요
-          </h2>
-          <p class="text-slate-300 text-sm sm:text-base max-w-xl mx-auto mb-8 leading-relaxed" data-i18n-html="contact_desc">
-            dawn4와의 비즈니스 파트너십, 투자, 채용 및 기타 문의사항은<br class="hidden sm:inline" />
-            아래 공식 이메일 채널을 통해 언제든 연락해 주시기 바랍니다.
-          </p>
+          <!-- Formspree Partnership Form -->
+          <form id="partnershipForm" action="https://formspree.io/f/mjykrbnk" method="POST" class="space-y-5">
+            <!-- Row 1: Company & Name -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="companyName" class="block text-xs font-medium text-slate-300 mb-2 flex items-center gap-1.5">
+                  <span data-i18n="form_label_company">회사 / 기관명</span>
+                  <span class="text-amber-400">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="companyName"
+                  name="company"
+                  required
+                  placeholder="예: (주)새벽연구소"
+                  data-i18n-placeholder="form_placeholder_company"
+                  class="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/[0.1] text-white placeholder-slate-500 text-sm focus:outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-500/20 transition-all"
+                />
+              </div>
+              <div>
+                <label for="contactName" class="block text-xs font-medium text-slate-300 mb-2 flex items-center gap-1.5">
+                  <span data-i18n="form_label_name">담당자 성함 및 직함</span>
+                  <span class="text-amber-400">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="contactName"
+                  name="name"
+                  required
+                  placeholder="예: 홍길동 팀장"
+                  data-i18n-placeholder="form_placeholder_name"
+                  class="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/[0.1] text-white placeholder-slate-500 text-sm focus:outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-500/20 transition-all"
+                />
+              </div>
+            </div>
 
-          <!-- Email Copy Card -->
-          <div class="inline-flex flex-col sm:flex-row items-center gap-3 p-2 pl-5 bg-white/[0.04] border border-white/[0.1] rounded-2xl backdrop-blur-md max-w-md w-full justify-between">
-            <span class="text-white font-mono text-sm tracking-wide" id="contactEmail">contact@dawn4.com</span>
-            <button id="copyEmailBtn" class="w-full sm:w-auto px-4 py-2 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-white text-xs font-bold transition-all flex items-center justify-center gap-1.5 shadow-lg shadow-orange-500/20">
+            <!-- Row 2: Email & Phone -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="contactEmailInput" class="block text-xs font-medium text-slate-300 mb-2 flex items-center gap-1.5">
+                  <span data-i18n="form_label_email">이메일 주소</span>
+                  <span class="text-amber-400">*</span>
+                </label>
+                <input
+                  type="email"
+                  id="contactEmailInput"
+                  name="email"
+                  required
+                  placeholder="name@company.com"
+                  class="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/[0.1] text-white placeholder-slate-500 text-sm focus:outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-500/20 transition-all"
+                />
+              </div>
+              <div>
+                <label for="contactPhone" class="block text-xs font-medium text-slate-300 mb-2">
+                  <span data-i18n="form_label_phone">연락처 (선택)</span>
+                </label>
+                <input
+                  type="tel"
+                  id="contactPhone"
+                  name="phone"
+                  placeholder="010-1234-5678"
+                  data-i18n-placeholder="form_placeholder_phone"
+                  class="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/[0.1] text-white placeholder-slate-500 text-sm focus:outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-500/20 transition-all"
+                />
+              </div>
+            </div>
+
+            <!-- Row 3: Inquiry Category -->
+            <div>
+              <label for="inquiryCategory" class="block text-xs font-medium text-slate-300 mb-2">
+                <span data-i18n="form_label_category">제휴 유형</span>
+              </label>
+              <select
+                id="inquiryCategory"
+                name="category"
+                class="w-full px-4 py-3 rounded-xl bg-dawn-900 border border-white/[0.1] text-slate-200 text-sm focus:outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-500/20 transition-all cursor-pointer"
+              >
+                <option value="business_partnership" data-i18n="form_opt_biz">비즈니스 및 서비스 협업</option>
+                <option value="content_marketing" data-i18n="form_opt_content">콘텐츠 및 마케팅 제휴</option>
+                <option value="b2b_wellness" data-i18n="form_opt_b2b">기업 웰니스 / B2B 솔루션 도입</option>
+                <option value="investment_ir" data-i18n="form_opt_investment">투자 및 IR 문의</option>
+                <option value="other" data-i18n="form_opt_other">기타 제휴 문의</option>
+              </select>
+            </div>
+
+            <!-- Row 4: Proposal Message -->
+            <div>
+              <label for="proposalMessage" class="block text-xs font-medium text-slate-300 mb-2 flex items-center gap-1.5">
+                <span data-i18n="form_label_message">제휴 제안 내용</span>
+                <span class="text-amber-400">*</span>
+              </label>
+              <textarea
+                id="proposalMessage"
+                name="message"
+                required
+                rows="4"
+                placeholder="제휴 목적 및 구체적인 제안 내용을 간략히 적어주세요."
+                data-i18n-placeholder="form_placeholder_message"
+                class="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/[0.1] text-white placeholder-slate-500 text-sm focus:outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-500/20 transition-all resize-y"
+              ></textarea>
+            </div>
+
+            <!-- Submit Button & State -->
+            <div class="pt-2">
+              <button
+                type="submit"
+                id="formSubmitBtn"
+                class="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-amber-500 via-orange-500 to-rose-500 hover:from-amber-400 hover:to-orange-400 text-white text-sm font-bold shadow-lg shadow-orange-500/20 hover:shadow-orange-500/40 transition-all flex items-center justify-center gap-2 cursor-pointer"
+              >
+                <i data-lucide="send" class="w-4 h-4" id="submitIcon"></i>
+                <span id="submitBtnText" data-i18n="form_btn_submit">제휴 제안 보내기</span>
+              </button>
+            </div>
+
+            <!-- Success Alert (Hidden initially) -->
+            <div id="formSuccessAlert" class="hidden p-5 rounded-2xl bg-emerald-950/80 border border-emerald-500/30 text-center animate-fade-in">
+              <div class="w-10 h-10 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto mb-3">
+                <i data-lucide="check-circle" class="w-6 h-6"></i>
+              </div>
+              <h4 class="text-base font-bold text-white mb-1" data-i18n="form_success_title">문의가 성공적으로 전달되었습니다!</h4>
+              <p class="text-xs sm:text-sm text-emerald-200/80" data-i18n="form_success_desc">
+                소중한 제안 감사드립니다. dawn4 담당자가 검토 후 남겨주신 이메일로 빠르게 회신드리겠습니다.
+              </p>
+            </div>
+
+            <!-- Error Alert (Hidden initially) -->
+            <div id="formErrorAlert" class="hidden p-4 rounded-xl bg-rose-950/80 border border-rose-500/30 text-rose-300 text-xs sm:text-sm text-center">
+              <span data-i18n="form_error_msg">전송 중 오류가 발생했습니다. 잠시 후 다시 시도하시거나 contact@dawn4.com으로 직접 메일을 보내주세요.</span>
+            </div>
+          </form>
+
+          <!-- Direct Email Alternative -->
+          <div class="mt-10 pt-8 border-t border-white/[0.08] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+            <span class="text-slate-400 flex items-center gap-2">
+              <i data-lucide="mail" class="w-4 h-4 text-amber-400"></i>
+              <span data-i18n="form_alt_contact">직접 이메일로 문의:</span>
+              <strong class="text-white font-mono" id="contactEmail">contact@dawn4.com</strong>
+            </span>
+            <button id="copyEmailBtn" class="px-3.5 py-1.5 rounded-lg bg-white/[0.06] hover:bg-white/[0.12] text-slate-300 hover:text-white border border-white/[0.1] transition-all flex items-center gap-1.5 font-medium">
               <i data-lucide="copy" class="w-3.5 h-3.5" id="copyIcon"></i>
               <span id="copyBtnText" data-i18n="btn_copy_email">이메일 복사</span>
             </button>
           </div>
 
-          <div class="mt-8 text-xs text-slate-500" data-i18n="contact_note">
-            * 사전 예약 및 서비스 신청 폼은 추후 프로덕트 공개 시점에 별도 오픈됩니다.
+          <div class="mt-6 text-center text-[11px] text-slate-500" data-i18n="contact_note">
+            * 사전 예약 및 일반 서비스 신청은 추후 프로덕트 공개 시점에 별도 오픈됩니다.
           </div>
         </div>
       </div>
