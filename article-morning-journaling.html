@@ -13,6 +13,13 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8835815142957541"
      crossorigin="anonymous"></script>
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8EEQN8DFFL"></script>
+  <script src="analytics.js"></script>
+
+  <!-- Reusable Web Components -->
+  <script src="components.js"></script>
+
   <!-- OpenGraph Meta Tags -->
   <meta property="og:type" content="article" />
   <meta property="og:title" content="모닝 저널링의 마법: 생각의 과부하를 비우는 브레인 덤프 기법" />
@@ -43,29 +50,8 @@
 </head>
 <body class="bg-dawn-950 text-slate-100 font-sans antialiased min-h-screen selection:bg-amber-500/30 selection:text-amber-200">
 
-  <!-- Header -->
-  <header class="border-b border-white/[0.08] bg-dawn-950/90 backdrop-blur-md sticky top-0 z-50">
-    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-3 group">
-        <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-amber-500 to-rose-500 p-[1.5px] shadow-lg shadow-orange-500/20">
-          <div class="w-full h-full bg-dawn-950 rounded-[10px] flex items-center justify-center">
-            <span class="text-transparent bg-clip-text bg-gradient-to-tr from-amber-400 to-rose-400 font-bold text-sm">d4</span>
-          </div>
-        </div>
-        <div class="flex flex-col">
-          <span class="text-xl font-bold tracking-tight text-white group-hover:text-amber-300 transition-colors">dawn4</span>
-          <span class="text-[10px] tracking-widest text-slate-400 font-medium uppercase">Miracle Morning Lab</span>
-        </div>
-      </a>
-
-      <nav class="flex items-center gap-6 text-sm font-medium text-slate-300">
-        <a href="index.html" class="hover:text-amber-400 transition-colors">홈 (Home)</a>
-        <a href="blog.html" class="text-amber-400 font-semibold transition-colors">블로그 (Blog)</a>
-        <a href="index.html#calculator" class="hover:text-amber-400 transition-colors">수면 계산기</a>
-        <a href="index.html#contact" class="hover:text-amber-400 transition-colors">제휴 문의</a>
-      </nav>
-    </div>
-  </header>
+  <!-- Reusable Site Header -->
+  <site-header current="blog"></site-header>
 
   <main class="max-w-3xl mx-auto px-6 py-14">
     <!-- Breadcrumb -->
@@ -200,12 +186,7 @@
       </section>
 
       <!-- Author Credentials Box (E-E-A-T) -->
-      <div class="p-6 rounded-2xl bg-dawn-900 border border-white/[0.08] flex items-start gap-4 my-8">
-        <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-purple-500 to-amber-500 p-[2px] shrink-0">
-          <div class="w-full h-full rounded-full bg-dawn-950 flex items-center justify-center text-purple-300 font-bold text-sm">
-            d4
-          </div>
-        </div>
+      <author-box></author-box>
         <div>
           <h4 class="text-sm font-bold text-white">dawn4 인지심리 연구소</h4>
           <p class="text-xs text-slate-400 mt-1 leading-relaxed">
@@ -243,24 +224,8 @@
     </article>
   </main>
 
-  <!-- Footer -->
-  <footer class="py-12 px-6 border-t border-white/[0.06] bg-dawn-950 text-slate-500 text-xs">
-    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-      <div class="flex items-center gap-3">
-        <span class="text-slate-300 font-bold">dawn4 Inc.</span>
-        <span>|</span>
-        <span>The Miracle Morning Life-Tech Company</span>
-      </div>
-      <div class="flex items-center gap-6">
-        <a href="index.html" class="hover:text-slate-300">홈</a>
-        <a href="blog.html" class="text-amber-400 font-medium">블로그</a>
-        <a href="index.html#calculator" class="hover:text-slate-300">수면 계산기</a>
-        <a href="privacy.html" class="hover:text-slate-300">개인정보처리방침</a>
-        <a href="terms.html" class="hover:text-slate-300">이용약관</a>
-      </div>
-      <p>&copy; 2026 dawn4 Inc. All rights reserved.</p>
-    </div>
-  </footer>
+  <!-- Reusable Site Footer -->
+  <site-footer current="blog"></site-footer>
 
   <script>
     if (window.lucide) window.lucide.createIcons();

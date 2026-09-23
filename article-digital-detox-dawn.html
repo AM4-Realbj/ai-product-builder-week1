@@ -10,6 +10,13 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8835815142957541"
        crossorigin="anonymous"></script>
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8EEQN8DFFL"></script>
+  <script src="analytics.js"></script>
+
+  <!-- Reusable Web Components -->
+  <script src="components.js"></script>
+
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%' y1='100%' x2='100%' y2='0%'><stop offset='0%' stop-color='%23f59e0b'/><stop offset='100%' stop-color='%23ec4899'/></linearGradient></defs><circle cx='50' cy='50' r='45' fill='%2307090e'/><path d='M25 65 A25 25 0 0 1 75 65 Z' fill='url(%23g)'/><circle cx='50' cy='42' r='8' fill='%23fef08a'/></svg>" />
   <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
   <script src="https://cdn.tailwindcss.com"></script>
@@ -39,29 +46,8 @@
 </head>
 <body class="bg-dawn-950 text-slate-200 font-sans antialiased overflow-x-hidden selection:bg-orange-500 selection:text-white">
 
-  <!-- Header -->
-  <header class="sticky top-0 z-50 backdrop-blur-xl bg-dawn-950/80 border-b border-white/[0.08]">
-    <div class="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-500 via-orange-500 to-rose-500 p-[1px] shadow-lg shadow-orange-500/20">
-          <div class="w-full h-full bg-dawn-900 rounded-[11px] flex items-center justify-center">
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-400 font-black text-xl">4</span>
-          </div>
-        </div>
-        <div class="flex flex-col">
-          <span class="text-xl font-bold tracking-tight text-white">dawn4</span>
-          <span class="text-[10px] tracking-widest text-slate-400 font-medium uppercase">Research & Insights</span>
-        </div>
-      </a>
-
-      <nav class="flex items-center gap-6 text-sm font-medium text-slate-300">
-        <a href="index.html" class="hover:text-amber-400 transition-colors">홈 (Home)</a>
-        <a href="blog.html" class="text-amber-400 font-semibold transition-colors">블로그 (Blog)</a>
-        <a href="index.html#calculator" class="hover:text-amber-400 transition-colors">수면 계산기</a>
-        <a href="index.html#contact" class="hover:text-amber-400 transition-colors">제휴 문의</a>
-      </nav>
-    </div>
-  </header>
+  <!-- Reusable Site Header -->
+  <site-header current="blog"></site-header>
 
   <main class="max-w-3xl mx-auto px-6 py-14">
     <!-- Breadcrumb -->
@@ -195,12 +181,7 @@
       </section>
 
       <!-- Author Credentials Box (E-E-A-T) -->
-      <div class="p-6 rounded-2xl bg-dawn-900 border border-white/[0.08] flex items-start gap-4 my-8">
-        <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-rose-500 to-amber-500 p-[2px] shrink-0">
-          <div class="w-full h-full rounded-full bg-dawn-950 flex items-center justify-center text-rose-300 font-bold text-sm">
-            d4
-          </div>
-        </div>
+      <author-box></author-box>
         <div>
           <h4 class="text-sm font-bold text-white">dawn4 디지털 웰니스 리서치팀</h4>
           <p class="text-xs text-slate-400 mt-1 leading-relaxed">
@@ -238,24 +219,8 @@
     </article>
   </main>
 
-  <!-- Footer -->
-  <footer class="py-12 px-6 border-t border-white/[0.06] bg-dawn-950 text-slate-500 text-xs">
-    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-      <div class="flex items-center gap-3">
-        <span class="text-slate-300 font-bold">dawn4 Inc.</span>
-        <span>|</span>
-        <span>The Miracle Morning Life-Tech Company</span>
-      </div>
-      <div class="flex items-center gap-6">
-        <a href="index.html" class="hover:text-slate-300">홈</a>
-        <a href="blog.html" class="text-amber-400 font-medium">블로그</a>
-        <a href="index.html#calculator" class="hover:text-slate-300">수면 계산기</a>
-        <a href="privacy.html" class="hover:text-slate-300">개인정보처리방침</a>
-        <a href="terms.html" class="hover:text-slate-300">이용약관</a>
-      </div>
-      <p>&copy; 2026 dawn4 Inc. All rights reserved.</p>
-    </div>
-  </footer>
+  <!-- Reusable Site Footer -->
+  <site-footer current="blog"></site-footer>
 
   <script>
     if (window.lucide) window.lucide.createIcons();

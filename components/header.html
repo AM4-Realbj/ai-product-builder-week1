@@ -1,0 +1,35 @@
+<!-- Reusable Header Template (Managed dynamically via components.js) -->
+<header class="border-b border-white/[0.08] bg-dawn-950/90 backdrop-blur-md sticky top-0 z-50">
+  <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3 group">
+      <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-amber-500 to-rose-500 p-[1.5px] shadow-lg shadow-orange-500/20">
+        <div class="w-full h-full bg-dawn-950 rounded-[10px] flex items-center justify-center">
+          <span class="text-transparent bg-clip-text bg-gradient-to-tr from-amber-400 to-rose-400 font-bold text-sm">d4</span>
+        </div>
+      </div>
+      <div class="flex flex-col">
+        <span class="text-xl font-bold tracking-tight text-white group-hover:text-amber-300 transition-colors">dawn4</span>
+        <span class="text-[10px] tracking-widest text-slate-400 font-medium uppercase">Miracle Morning Lab</span>
+      </div>
+    </a>
+
+    <!-- Desktop Navigation Links -->
+    <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
+      <a href="index.html" class="hover:text-amber-400 transition-colors">홈 (Home)</a>
+      <a href="blog.html" class="hover:text-amber-400 transition-colors flex items-center gap-1.5">
+        <span>블로그 (Blog)</span>
+        <span class="px-1.5 py-0.2 rounded-full bg-amber-500/20 text-amber-300 text-[10px] font-bold">10 Posts</span>
+      </a>
+      <a href="index.html#calculator" class="hover:text-amber-400 transition-colors">수면 계산기</a>
+      <a href="index.html#contact" class="hover:text-amber-400 transition-colors">제휴 문의</a>
+    </nav>
+
+    <!-- Mobile Button -->
+    <div class="md:hidden flex items-center gap-2">
+      <a href="index.html#calculator" class="text-xs px-2.5 py-1 rounded-lg bg-amber-500/20 text-amber-300 border border-amber-500/30">수면 계산기</a>
+      <button type="button" class="site-mobile-toggle p-2 text-slate-400 hover:text-white" aria-label="메뉴">
+        <i data-lucide="menu" class="w-5 h-5"></i>
+      </button>
+    </div>
+  </div>
+</header>
