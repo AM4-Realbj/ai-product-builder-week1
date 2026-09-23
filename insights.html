@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>모닝 인사이트 & 리서치 허브 (Morning Insights) | dawn4</title>
+  <meta name="description" content="수면 과학, 서카디언 리듬, 습관 형성 심리학, 디지털 디톡스 등 dawn4가 제공하는 미라클 모닝 전문 아티클과 리서치 인사이트를 만나보세요." />
+  
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%' y1='100%' x2='100%' y2='0%'><stop offset='0%' stop-color='%23f59e0b'/><stop offset='100%' stop-color='%23ec4899'/></linearGradient></defs><circle cx='50' cy='50' r='45' fill='%2307090e'/><path d='M25 65 A25 25 0 0 1 75 65 Z' fill='url(%23g)'/><circle cx='50' cy='42' r='8' fill='%23fef08a'/></svg>" />
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Pretendard', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'Roboto', 'sans-serif'],
+          },
+          colors: {
+            dawn: {
+              950: '#05070c',
+              900: '#090d16',
+              850: '#0f1624',
+              800: '#151f33',
+              accent: '#f97316',
+              gold: '#f59e0b',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-dawn-950 text-slate-200 font-sans antialiased overflow-x-hidden selection:bg-orange-500 selection:text-white">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 backdrop-blur-xl bg-dawn-950/80 border-b border-white/[0.08]">
+    <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-500 via-orange-500 to-rose-500 p-[1px] shadow-lg shadow-orange-500/20">
+          <div class="w-full h-full bg-dawn-900 rounded-[11px] flex items-center justify-center">
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-400 font-black text-xl">4</span>
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-xl font-bold tracking-tight text-white">dawn4</span>
+          <span class="text-[10px] tracking-widest text-slate-400 font-medium uppercase">Research & Insights</span>
+        </div>
+      </a>
+
+      <nav class="flex items-center gap-6 text-sm font-medium text-slate-300">
+        <a href="index.html" class="hover:text-amber-400 transition-colors">홈 (Home)</a>
+        <a href="insights.html" class="text-amber-400 font-semibold transition-colors">인사이트 (Insights)</a>
+        <a href="index.html#contact" class="hover:text-amber-400 transition-colors">제휴 문의</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-6 py-16">
+    <!-- Hub Header -->
+    <div class="max-w-3xl mx-auto text-center mb-16">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20 mb-4">
+        <i data-lucide="book-open" class="w-3.5 h-3.5"></i>
+        <span>DAWN4 KNOWLEDGE HUB</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-white mb-4 tracking-tight leading-tight">
+        미라클 모닝 인사이트 & 리서치
+      </h1>
+      <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+        뇌과학, 서카디언 생체리듬, 행동설계학에 기반한 깊이 있는 분석과 지속 가능한 아침의 라이프스타일 가이드를 제공합니다.
+      </p>
+    </div>
+
+    <!-- Articles Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Article Card 1 -->
+      <article class="p-8 rounded-3xl bg-dawn-900/80 border border-white/[0.08] hover:border-amber-500/40 transition-all flex flex-col justify-between group">
+        <div>
+          <div class="flex items-center justify-between text-xs text-slate-400 mb-4">
+            <span class="px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-300 font-semibold border border-amber-500/20">수면 신경과학</span>
+            <span>읽는 시간: 6분</span>
+          </div>
+          <h2 class="text-2xl font-bold text-white mb-3 group-hover:text-amber-300 transition-colors leading-snug">
+            <a href="article-circadian-rhythm.html">새벽 4시의 신경과학: 서카디언 리듬과 수면 사이클이 만드는 뇌의 몰입 상태</a>
+          </h2>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">
+            시교차상핵(SCN) 생체 시계의 작동 원리와 90분 수면 사이클 분석. 왜 새벽 4시가 뇌의 알파파와 깊은 몰입에 가장 적합한 생물학적 기상 시점인지 신경과학적으로 규명합니다.
+          </p>
+        </div>
+        <div class="pt-4 border-t border-white/[0.06] flex items-center justify-between">
+          <span class="text-xs text-slate-500">2026. 09. 23 • dawn4 Research</span>
+          <a href="article-circadian-rhythm.html" class="inline-flex items-center gap-1.5 text-amber-400 hover:text-amber-300 text-xs font-bold">
+            <span>전문 읽기</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- Article Card 2 -->
+      <article class="p-8 rounded-3xl bg-dawn-900/80 border border-white/[0.08] hover:border-orange-500/40 transition-all flex flex-col justify-between group">
+        <div>
+          <div class="flex items-center justify-between text-xs text-slate-400 mb-4">
+            <span class="px-2.5 py-1 rounded-full bg-orange-500/10 text-orange-300 font-semibold border border-orange-500/20">습관 형성 심리학</span>
+            <span>읽는 시간: 5분</span>
+          </div>
+          <h2 class="text-2xl font-bold text-white mb-3 group-hover:text-orange-300 transition-colors leading-snug">
+            <a href="article-atomic-morning-habits.html">지속 가능한 모닝 루틴의 심리학: 의지력 없이 21일을 완성하는 미세 습관 설계법</a>
+          </h2>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">
+            자아 고갈 이론과 의지력의 한계 극복. 30초 안에 끝낼 수 있는 마이크로 루틴과 전날 밤 환경 재설계로 아침 기상의 마찰력을 제로(Zero)로 만드는 실천 전략.
+          </p>
+        </div>
+        <div class="pt-4 border-t border-white/[0.06] flex items-center justify-between">
+          <span class="text-xs text-slate-500">2026. 09. 23 • dawn4 Behavioral Team</span>
+          <a href="article-atomic-morning-habits.html" class="inline-flex items-center gap-1.5 text-orange-400 hover:text-orange-300 text-xs font-bold">
+            <span>전문 읽기</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- Article Card 3 -->
+      <article class="p-8 rounded-3xl bg-dawn-900/80 border border-white/[0.08] hover:border-rose-500/40 transition-all flex flex-col justify-between group">
+        <div>
+          <div class="flex items-center justify-between text-xs text-slate-400 mb-4">
+            <span class="px-2.5 py-1 rounded-full bg-rose-500/10 text-rose-300 font-semibold border border-rose-500/20">디지털 웰니스</span>
+            <span>읽는 시간: 5분</span>
+          </div>
+          <h2 class="text-2xl font-bold text-white mb-3 group-hover:text-rose-300 transition-colors leading-snug">
+            <a href="article-digital-detox-dawn.html">새벽의 사일런트 디톡스: 스마트폰 없는 첫 60분이 뇌의 도파민 수용체를 회복시키는 원리</a>
+          </h2>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">
+            기상 직후 스마트폰 확인이 전두엽과 도파민 시스템에 미치는 악영향 분석. 스크린 없는 첫 60분이 반응적 태도를 주도적 집중력으로 바꾸는 뇌신경 원리.
+          </p>
+        </div>
+        <div class="pt-4 border-t border-white/[0.06] flex items-center justify-between">
+          <span class="text-xs text-slate-500">2026. 09. 23 • dawn4 Wellness Team</span>
+          <a href="article-digital-detox-dawn.html" class="inline-flex items-center gap-1.5 text-rose-400 hover:text-rose-300 text-xs font-bold">
+            <span>전문 읽기</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- Article Card 4 -->
+      <article class="p-8 rounded-3xl bg-dawn-900/80 border border-white/[0.08] hover:border-amber-500/40 transition-all flex flex-col justify-between group">
+        <div>
+          <div class="flex items-center justify-between text-xs text-slate-400 mb-4">
+            <span class="px-2.5 py-1 rounded-full bg-indigo-500/10 text-indigo-300 font-semibold border border-indigo-500/20">생산성 과학</span>
+            <span>읽는 시간: 6분</span>
+          </div>
+          <h2 class="text-2xl font-bold text-white mb-3 group-hover:text-amber-300 transition-colors leading-snug">
+            <a href="article-leaders-morning-routine.html">글로벌 혁신가들이 04:00 AM을 고수하는 과학적 이유: 시간적 독점성의 힘</a>
+          </h2>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">
+            애플 CEO 팀 쿡, 벤저민 프랭클린 등 시대를 이끈 리더들의 일과 분석. 타인의 방해가 없는 시간적 독점성(Temporal Solitude)이 전략적 의사결정에 미치는 영향.
+          </p>
+        </div>
+        <div class="pt-4 border-t border-white/[0.06] flex items-center justify-between">
+          <span class="text-xs text-slate-500">2026. 09. 23 • dawn4 Editorial Board</span>
+          <a href="article-leaders-morning-routine.html" class="inline-flex items-center gap-1.5 text-amber-400 hover:text-amber-300 text-xs font-bold">
+            <span>전문 읽기</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+      </article>
+    </div>
+
+    <!-- Editorial Standards & AdSense Compliance Banner -->
+    <div class="mt-16 p-8 rounded-3xl bg-dawn-900/60 border border-white/[0.08] text-center">
+      <h3 class="text-lg font-bold text-white mb-2">dawn4 리서치 편집 원칙</h3>
+      <p class="text-slate-400 text-xs sm:text-sm max-w-2xl mx-auto leading-relaxed">
+        본 사이트의 모든 인사이트는 공인된 신경과학, 행동심리학, 수면 의학 논문 및 검증된 리더십 사례를 바탕으로 작성됩니다. 과장된 갓생 강박을 지양하고, 사용자의 건강하고 지속 가능한 웰니스를 최우선으로 합니다.
+      </p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-12 px-6 border-t border-white/[0.06] bg-dawn-950 text-slate-500 text-xs">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <span class="text-slate-300 font-bold">dawn4 Inc.</span>
+        <span>|</span>
+        <span>The Miracle Morning Life-Tech Company</span>
+      </div>
+      <div class="flex items-center gap-6">
+        <a href="index.html" class="hover:text-slate-300">홈</a>
+        <a href="insights.html" class="text-amber-400 font-medium">인사이트</a>
+        <a href="privacy.html" class="hover:text-slate-300">개인정보처리방침</a>
+        <a href="terms.html" class="hover:text-slate-300">이용약관</a>
+      </div>
+      <p>&copy; 2026 dawn4 Inc. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    if (window.lucide) window.lucide.createIcons();
+  </script>
+</body>
+</html>

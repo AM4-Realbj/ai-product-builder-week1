@@ -8,6 +8,7 @@ const translations = {
     nav_vision: "철학과 비전",
     nav_solution: "솔루션 미리보기",
     nav_about: "회사 소개",
+    nav_insights: "인사이트",
     nav_roadmap: "로드맵",
     nav_contact: "문의하기",
     nav_status: "프로덕트 준비 중 (Coming Soon)",
@@ -120,12 +121,20 @@ const translations = {
     btn_copied: "복사 완료!",
     contact_note: "* 사전 예약 및 일반 서비스 신청은 추후 프로덕트 공개 시점에 별도 오픈됩니다.",
 
+    // Featured Insights Section
+    insights_badge: "RESEARCH & EDITORIAL",
+    insights_heading: "새벽 4시의 과학: 최신 리서치 & 칼럼",
+    insights_view_all: "모든 인사이트 보기",
+
     // Footer
     footer_tagline: "The Miracle Morning Life-Tech Company",
+    footer_insights: "모닝 인사이트",
     footer_vision: "비전",
     footer_solution: "솔루션",
     footer_about: "회사소개",
-    footer_contact: "문의",
+    footer_contact: "제휴문의",
+    footer_privacy: "개인정보처리방침",
+    footer_terms: "이용약관",
 
     // Quotes
     quotes: [
@@ -145,6 +154,7 @@ const translations = {
     nav_vision: "Philosophy & Vision",
     nav_solution: "Solution Preview",
     nav_about: "About Us",
+    nav_insights: "Insights",
     nav_roadmap: "Roadmap",
     nav_contact: "Contact",
     nav_status: "Product in Development (Coming Soon)",
@@ -257,12 +267,20 @@ const translations = {
     btn_copied: "Copied!",
     contact_note: "* Pre-registration and service sign-up forms will open upon product unveiling.",
 
+    // Featured Insights Section
+    insights_badge: "RESEARCH & EDITORIAL",
+    insights_heading: "The Science of 04:00 AM: Research & Insights",
+    insights_view_all: "View All Insights",
+
     // Footer
     footer_tagline: "The Miracle Morning Life-Tech Company",
+    footer_insights: "Morning Insights",
     footer_vision: "Vision",
     footer_solution: "Solution",
     footer_about: "About",
-    footer_contact: "Contact",
+    footer_contact: "Partnership",
+    footer_privacy: "Privacy Policy",
+    footer_terms: "Terms of Service",
 
     // Quotes
     quotes: [
