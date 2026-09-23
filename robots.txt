@@ -5,4 +5,5 @@ Allow: /
 User-agent: Mediapartners-Google
 Allow: /
 
+Sitemap: https://ai-product-builder-week1.pages.dev/sitemap.xml
 Sitemap: https://am4-realbj.github.io/ai-product-builder-week1/sitemap.xml
