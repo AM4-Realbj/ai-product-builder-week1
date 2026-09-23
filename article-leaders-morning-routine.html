@@ -56,6 +56,7 @@
 
       <nav class="flex items-center gap-6 text-sm font-medium text-slate-300">
         <a href="index.html" class="hover:text-amber-400 transition-colors">홈 (Home)</a>
+        <a href="index.html#calculator" class="hover:text-amber-400 transition-colors text-amber-300 font-semibold">수면 계산기</a>
         <a href="insights.html" class="text-amber-400 font-semibold transition-colors">인사이트 (Insights)</a>
         <a href="index.html#contact" class="hover:text-amber-400 transition-colors">제휴 문의</a>
       </nav>
@@ -90,13 +91,28 @@
       </div>
     </header>
 
+    <!-- Table of Contents -->
+    <div class="mb-10 p-5 rounded-2xl bg-dawn-900/90 border border-white/[0.08]">
+      <h3 class="text-sm font-bold text-indigo-300 uppercase tracking-wider mb-3 flex items-center gap-2">
+        <i data-lucide="list" class="w-4 h-4"></i>
+        <span>목차 (Table of Contents)</span>
+      </h3>
+      <ol class="space-y-1.5 text-xs sm:text-sm text-slate-300">
+        <li><a href="#sec1" class="hover:text-indigo-400 transition-colors">1. 시간적 독점성(Temporal Solitude)이란 무엇인가?</a></li>
+        <li><a href="#sec2" class="hover:text-indigo-400 transition-colors">2. 혁신가들의 새벽 패턴 분석</a></li>
+        <li><a href="#sec3" class="hover:text-indigo-400 transition-colors">3. 아이젠하워 매트릭스의 재발견: 중요한 일 먼저 하기</a></li>
+        <li><a href="#sec4" class="hover:text-indigo-400 transition-colors">4. 딥 워크(Deep Work)와 비선형적 생산성의 법칙</a></li>
+        <li><a href="#sec5" class="hover:text-indigo-400 transition-colors">5. 핵심 요약 및 문헌 참고 자료</a></li>
+      </ol>
+    </div>
+
     <!-- Article Body -->
     <article class="prose prose-invert max-w-none text-slate-300 text-base leading-relaxed space-y-8">
       <p class="text-lg text-slate-200 font-medium leading-relaxed bg-white/[0.02] p-5 rounded-2xl border-l-4 border-amber-400">
         "누구도 나에게 회신을 재촉하지 않고, 전화벨이 울리지 않으며, 긴급한 슬랙 메시지가 도착하지 않는 단 하나의 시간대. 바로 새벽 4시입니다."
       </p>
 
-      <section>
+      <section id="sec1">
         <h2 class="text-2xl font-bold text-white mb-4">1. 시간적 독점성(Temporal Solitude)이란 무엇인가?</h2>
         <p class="mb-4">
           '시간적 독점성(Temporal Solitude)'이란 타인의 기대, 요구, 의사소통 요청으로부터 완전히 차단된 상태에서 누리는 온전한 주권적 시간을 의미합니다. 현대 직장인과 지식 노동자들은 낮 시간 동안 평균 3분마다 이메일, 메신저, 회의 등으로 인해 주의가 분절되는 **'인지 잔여물(Attention Residue)'** 문제에 시달립니다.
@@ -106,7 +122,7 @@
         </p>
       </section>
 
-      <section>
+      <section id="sec2">
         <h2 class="text-2xl font-bold text-white mb-4">2. 혁신가들의 새벽 패턴 분석</h2>
         <div class="space-y-4 my-6">
           <div class="p-5 rounded-2xl bg-dawn-900 border border-white/[0.08]">
@@ -125,7 +141,7 @@
         </div>
       </section>
 
-      <section>
+      <section id="sec3">
         <h2 class="text-2xl font-bold text-white mb-4">3. 아이젠하워 매트릭스의 재발견: 중요한 일 먼저 하기</h2>
         <p class="mb-4">
           우리의 하루는 흔히 **'긴급하지만 중요하지 않은 일'**(각종 알림, 즉각적인 답장 요청)에 매몰되기 쉽습니다. 그러나 인생을 바꾸는 일들은 대개 **'긴급하지 않지만 가장 중요한 일'**(장기적 커리어 기획, 독서, 건강 관리, 신규 프로젝트 빌딩)에 속합니다.
@@ -135,8 +151,18 @@
         </p>
       </section>
 
+      <section id="sec4">
+        <h2 class="text-2xl font-bold text-white mb-4">4. 딥 워크(Deep Work)와 비선형적 생산성의 법칙</h2>
+        <p class="mb-4">
+          소피 르로이(Sophie Leroy) 미네소타 대학교 교수의 연구에 따르면, 작업 전환이 발생할 때 인간의 뇌는 이전 작업에 주의력 일부를 남겨두는 '주의 잔여물(Attention Residue)' 현상을 겪습니다. 이로 인해 낮 동안 멀티태스킹을 시도할 때 작업 효율은 산술급수적이 아니라 기하급수적으로 저하됩니다.
+        </p>
+        <p class="mb-4">
+          반면, 새벽 시간대의 단일 과업 몰입(Deep Work)은 뇌를 완전한 몰입(Flow) 상태로 이끌어 결과물의 질적 가치를 비선형적으로 극대화합니다. 역사적 사상가인 벤자민 프랭클린이 "일찍 자고 일찍 일어나는 것은 사람을 건강하고 부유하며 지혜롭게 만든다"고 강조한 배경에는 이러한 인지 과학적 필연이 자리 잡고 있습니다.
+        </p>
+      </section>
+
       <!-- Key Takeaways -->
-      <section class="p-6 rounded-2xl bg-dawn-900/90 border border-amber-500/30 my-8">
+      <section id="sec5" class="p-6 rounded-2xl bg-dawn-900/90 border border-amber-500/30 my-8">
         <h3 class="text-lg font-bold text-amber-300 mb-3 flex items-center gap-2">
           <i data-lucide="check-circle" class="w-5 h-5 text-amber-400"></i>
           핵심 요약 (Key Takeaways)
@@ -147,6 +173,51 @@
           <li>긴급한 일이 시작되기 전에 내 인생의 가장 중요한 일을 먼저 완수하십시오.</li>
         </ol>
       </section>
+
+      <!-- Academic References Section (E-E-A-T) -->
+      <section class="p-6 rounded-2xl bg-white/[0.02] border border-white/[0.08] my-8">
+        <h3 class="text-base font-bold text-white mb-3 flex items-center gap-2">
+          <i data-lucide="library" class="w-4 h-4 text-indigo-400"></i>
+          생산성 과학 및 경영 문헌 (Scientific & Biographical References)
+        </h3>
+        <ul class="text-xs text-slate-400 space-y-2 pl-2 list-disc list-inside">
+          <li>Newport, C. (2016). <em>Deep Work: Rules for Focused Success in a Distracted World</em>. Grand Central Publishing.</li>
+          <li>Leroy, S. (2009). Why is it so hard to do my work? The challenge of attention residue when switching between work tasks. <em>Organizational Behavior and Human Decision Processes</em>, 109(2), 168-181.</li>
+          <li>McKeown, G. (2014). <em>Essentialism: The Disciplined Pursuit of Less</em>. Crown Business.</li>
+          <li>Isaacson, W. (2011). <em>Steve Jobs</em>. Simon & Schuster.</li>
+          <li>Franklin, B. (1793). <em>The Autobiography of Benjamin Franklin</em>. J. Parsons.</li>
+        </ul>
+      </section>
+
+      <!-- Author Credentials Box (E-E-A-T) -->
+      <div class="p-6 rounded-2xl bg-dawn-900 border border-white/[0.08] flex items-start gap-4 my-8">
+        <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-indigo-500 to-amber-500 p-[2px] shrink-0">
+          <div class="w-full h-full rounded-full bg-dawn-950 flex items-center justify-center text-indigo-300 font-bold text-sm">
+            d4
+          </div>
+        </div>
+        <div>
+          <h4 class="text-sm font-bold text-white">dawn4 생산성 & 리더십 연구회</h4>
+          <p class="text-xs text-slate-400 mt-1 leading-relaxed">
+            글로벌 최고경영자들의 시간 관리 방법론, 인지 부하 제어 전략, 조직 생산성 및 일상 루틴 설계를 분석하는 전문 에디토리얼 팀입니다. 실증적 문헌과 실제 비즈니스 사례를 심도 있게 연구하여 인사이트를 제공합니다.
+          </p>
+        </div>
+      </div>
+
+      <!-- Related Articles Cross-Linking -->
+      <div class="my-10 pt-8 border-t border-white/[0.08]">
+        <h3 class="text-lg font-bold text-white mb-4">함께 읽으면 좋은 추천 칼럼</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <a href="article-circadian-rhythm.html" class="p-4 rounded-xl bg-dawn-900/60 border border-white/[0.08] hover:border-amber-500/30 transition-all block group">
+            <span class="text-[11px] text-amber-400 font-semibold">수면 신경과학</span>
+            <h4 class="text-sm font-bold text-white group-hover:text-amber-300 transition-colors mt-1">새벽 4시의 신경과학: 서카디언 리듬과 수면 사이클 분석</h4>
+          </a>
+          <a href="article-atomic-morning-habits.html" class="p-4 rounded-xl bg-dawn-900/60 border border-white/[0.08] hover:border-amber-500/30 transition-all block group">
+            <span class="text-[11px] text-orange-400 font-semibold">습관 형성 심리학</span>
+            <h4 class="text-sm font-bold text-white group-hover:text-amber-300 transition-colors mt-1">지속 가능한 모닝 루틴의 심리학: 의지력 없이 21일 완성</h4>
+          </a>
+        </div>
+      </div>
 
       <!-- Navigation -->
       <div class="pt-8 border-t border-white/[0.08] flex items-center justify-between">
@@ -172,6 +243,7 @@
       </div>
       <div class="flex items-center gap-6">
         <a href="index.html" class="hover:text-slate-300">홈</a>
+        <a href="index.html#calculator" class="hover:text-slate-300">수면 계산기</a>
         <a href="insights.html" class="text-amber-400 font-medium">인사이트</a>
         <a href="privacy.html" class="hover:text-slate-300">개인정보처리방침</a>
         <a href="terms.html" class="hover:text-slate-300">이용약관</a>

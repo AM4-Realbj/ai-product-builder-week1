@@ -56,6 +56,7 @@
 
       <nav class="flex items-center gap-6 text-sm font-medium text-slate-300">
         <a href="index.html" class="hover:text-amber-400 transition-colors">홈 (Home)</a>
+        <a href="index.html#calculator" class="hover:text-amber-400 transition-colors text-amber-300 font-semibold">수면 계산기</a>
         <a href="insights.html" class="text-amber-400 font-semibold transition-colors">인사이트 (Insights)</a>
         <a href="index.html#contact" class="hover:text-amber-400 transition-colors">제휴 문의</a>
       </nav>
@@ -90,13 +91,28 @@
       </div>
     </header>
 
+    <!-- Table of Contents -->
+    <div class="mb-10 p-5 rounded-2xl bg-dawn-900/90 border border-white/[0.08]">
+      <h3 class="text-sm font-bold text-amber-300 uppercase tracking-wider mb-3 flex items-center gap-2">
+        <i data-lucide="list" class="w-4 h-4"></i>
+        <span>목차 (Table of Contents)</span>
+      </h3>
+      <ol class="space-y-1.5 text-xs sm:text-sm text-slate-300">
+        <li><a href="#sec1" class="hover:text-amber-400 transition-colors">1. 서카디언 리듬(Circadian Rhythm)과 시교차상핵(SCN)</a></li>
+        <li><a href="#sec2" class="hover:text-amber-400 transition-colors">2. 90분 수면 사이클의 역계산 공식</a></li>
+        <li><a href="#sec3" class="hover:text-amber-400 transition-colors">3. 멜라토닌과 코르티솔의 완만한 교차점</a></li>
+        <li><a href="#sec4" class="hover:text-amber-400 transition-colors">4. 뇌파의 기적: 알파파와 세타파의 결합</a></li>
+        <li><a href="#sec5" class="hover:text-amber-400 transition-colors">5. 핵심 요약 및 학술 참고 문헌</a></li>
+      </ol>
+    </div>
+
     <!-- Article Body -->
     <article class="prose prose-invert max-w-none text-slate-300 text-base leading-relaxed space-y-8">
       <p class="text-lg text-slate-200 font-medium leading-relaxed bg-white/[0.02] p-5 rounded-2xl border-l-4 border-amber-400">
         "일찍 일어나는 것은 단순한 인내의 산물이 아닙니다. 인간의 뇌는 하루 중 특정 시간대에 가장 방해받지 않는 신경 화학적 균형에 도달하도록 진화했습니다."
       </p>
 
-      <section>
+      <section id="sec1">
         <h2 class="text-2xl font-bold text-white mb-4">1. 서카디언 리듬(Circadian Rhythm)과 시교차상핵(SCN)</h2>
         <p class="mb-4">
           모든 인간의 뇌 시상하부 깊은 곳에는 약 2만 개의 신경세포로 구성된 <strong>시교차상핵(Suprachiasmatic Nucleus, SCN)</strong>이라는 생체 시계가 자리 잡고 있습니다. 이 생체 시계는 체온, 호르몬 분비, 인지 능력의 일주기 변화를 주관합니다.
@@ -106,38 +122,47 @@
         </p>
       </section>
 
-      <section>
+      <section id="sec2">
         <h2 class="text-2xl font-bold text-white mb-4">2. 90분 수면 사이클의 역계산 공식</h2>
         <p class="mb-4">
           인간의 수면은 크게 비렘(NREM, Non-Rapid Eye Movement) 수면과 렘(REM) 수면의 주기가 반복되는 90분 단위 사이클로 구성됩니다. 깊은 서파 수면(Deep Slow-Wave Sleep)은 밤 10시부터 새벽 2시 사이에 집중되며, 새벽 4시 이후에는 렘수면의 비율이 높아져 뇌가 얕은 수면 상태에 머뭅니다.
         </p>
         <div class="p-5 rounded-2xl bg-dawn-900 border border-white/[0.08] my-4">
-          <h3 class="text-amber-400 font-bold text-base mb-2">💡 dawn4 추천 5사이클 수면 공식</h3>
+          <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center justify-between">
+            <span>💡 dawn4 추천 5사이클 수면 공식</span>
+            <span class="text-[11px] font-normal px-2 py-0.5 rounded bg-amber-400/10 text-amber-300">인터랙티브 툴 제공</span>
+          </h3>
           <p class="text-sm text-slate-300">
             • 90분 × 5사이클 = 총 7시간 30분의 온전한 수면<br />
-            • 취침 시간: 오후 8시 30분 ~ 8시 45분<br />
+            • 취침 시간: 오후 8시 15분 ~ 8시 30분 (입면 버퍼 15분 반영)<br />
             • 기상 시간: 오전 4시 00분 (수면 관성 최소화 지점)
           </p>
+          <div class="mt-3 pt-3 border-t border-white/[0.08]">
+            <a href="index.html#calculator" class="inline-flex items-center gap-1.5 text-xs font-bold text-amber-400 hover:text-amber-300 transition-colors">
+              <i data-lucide="calculator" class="w-3.5 h-3.5"></i>
+              <span>내 목표 기상 시간에 맞춘 수면 사이클 직접 계산해보기 →</span>
+            </a>
+          </div>
         </div>
         <p>
           수면의 깊은 단계에서 굉음 알람으로 깨어날 때 발생하는 '수면 관성(Sleep Inertia)'은 최대 2시간까지 전두엽의 사고 능력을 마비시킵니다. 반면 얕은 수면 단계에서 부드러운 감각 자극으로 기상할 경우, 10분 이내에 온전한 집행 기능을 회복할 수 있습니다.
         </p>
       </section>
 
-      <section>
+      <section id="sec3">
         <h2 class="text-2xl font-bold text-white mb-4">3. 멜라토닌과 코르티솔의 완만한 교차점</h2>
         <p class="mb-4">
-          밤새 분비되던 수면 호르몬 멜라토닌(Melatonin)은 새벽 4시를 기점으로 급격히 감소합니다. 동시에 몸을 깨우는 코르티솔(Cortisol) 호르몬이 서서히 분비되기 시작하는 **'코르티솔 각성 반응(Cortisol Awakening Response, CAR)'**이 준비됩니다.
+          밤새 분비되던 수면 호르몬 멜라토닌(Melatonin)은 새벽 4시를 기점으로 급격히 감소합니다. 동시에 몸을 깨우는 코르티솔(Cortisol) 호르몬이 서서히 분비되기 시작하는 <strong>'코르티솔 각성 반응(Cortisol Awakening Response, CAR)'</strong>이 준비됩니다.
         </p>
         <p>
-          이 교차점에서 자연스러운 각성을 경험하면, 뇌는 스트레스 호르몬의 폭증 없이 차분하면서도 명료한 상태에 도달합니다. 신경과학계에서는 이 시기를 **'인지적 고요(Cognitive Stillness)'**라고 부르며, 복잡한 전략적 의사결정이나 심도 있는 창작 작업에 가장 적합한 골든아워로 평가합니다.
+          이 교차점에서 자연스러운 각성을 경험하면, 뇌는 스트레스 호르몬의 폭증 없이 차분하면서도 명료한 상태에 도달합니다. 신경과학계에서는 이 시기를 <strong>'인지적 고요(Cognitive Stillness)'</strong>라고 부르며, 복잡한 전략적 의사결정이나 심도 있는 창작 작업에 가장 적합한 골든아워로 평가합니다.
         </p>
       </section>
 
-      <section>
+      <section id="sec4">
         <h2 class="text-2xl font-bold text-white mb-4">4. 뇌파의 기적: 알파파와 세타파의 결합</h2>
         <p class="mb-4">
-          깨어난 직후 새벽 4시의 뇌는 일상의 분주한 베타파(14~30Hz)가 아닌, 깊은 이완과 통찰을 유도하는 **알파파(8~12Hz)** 및 직관적 창의성을 촉발하는 **세타파(4~8Hz)**의 상태에 머뭅니다.
+          깨어난 직후 새벽 4시의 뇌는 일상의 분주한 베타파(14~30Hz)가 아닌, 깊은 이완과 통찰을 유도하는 <strong>알파파(8~12Hz)</strong> 및 직관적 창의성을 촉발하는 <strong>세타파(4~8Hz)</strong>의 상태에 머뭅니다.
         </p>
         <ul class="list-disc list-inside space-y-2 pl-2">
           <li><strong>알파파(Alpha):</strong> 외부의 잡음이 차단된 상태에서 높은 학습 흡수력과 집중력을 유지.</li>
@@ -146,7 +171,7 @@
       </section>
 
       <!-- Key Takeaways Box -->
-      <section class="p-6 rounded-2xl bg-dawn-900/90 border border-amber-500/30 my-8">
+      <section id="sec5" class="p-6 rounded-2xl bg-dawn-900/90 border border-amber-500/30 my-8">
         <h3 class="text-lg font-bold text-amber-300 mb-3 flex items-center gap-2">
           <i data-lucide="check-circle" class="w-5 h-5 text-amber-400"></i>
           핵심 요약 (Key Takeaways)
@@ -158,8 +183,52 @@
         </ol>
       </section>
 
+      <!-- Academic References Section (E-E-A-T) -->
+      <section class="p-6 rounded-2xl bg-white/[0.02] border border-white/[0.08] my-8">
+        <h3 class="text-base font-bold text-white mb-3 flex items-center gap-2">
+          <i data-lucide="library" class="w-4 h-4 text-amber-400"></i>
+          학술 참고 문헌 (Scientific References)
+        </h3>
+        <ul class="text-xs text-slate-400 space-y-2 pl-2 list-disc list-inside">
+          <li>Walker, M. (2017). <em>Why We Sleep: Unlocking the Power of Sleep and Dreams</em>. Scribner.</li>
+          <li>Saper, C. B., Scammell, T. E., & Lu, J. (2005). Hypothalamic regulation of sleep and circadian rhythms. <em>Nature</em>, 437(7063), 1257-1263.</li>
+          <li>Czeisler, C. A., et al. (1999). Stability, precision, and near-24-hour period of the human circadian pacemaker. <em>Science</em>, 284(5423), 2177-2181.</li>
+          <li>Fries, E., Dettenborn, L., & Kirschbaum, C. (2009). The cortisol awakening response (CAR) in normal healthy individuals. <em>International Journal of Psychophysiology</em>, 72(1), 67-73.</li>
+        </ul>
+      </section>
+
+      <!-- Author Credentials Box (E-E-A-T) -->
+      <div class="p-6 rounded-2xl bg-dawn-900 border border-white/[0.08] flex items-start gap-4 my-8">
+        <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-amber-500 to-rose-500 p-[2px] shrink-0">
+          <div class="w-full h-full rounded-full bg-dawn-950 flex items-center justify-center text-amber-300 font-bold text-sm">
+            d4
+          </div>
+        </div>
+        <div>
+          <h4 class="text-sm font-bold text-white">dawn4 라이프사이언스 리서치 랩</h4>
+          <p class="text-xs text-slate-400 mt-1 leading-relaxed">
+            인간의 인지 기능, 서카디언 생체시계, 행동경제학 및 수면의 질 개선을 연구하는 사내 전문 연구진입니다. 모든 칼럼은 공인된 과학적 연구 데이터를 바탕으로 정밀 검증을 거쳐 발행됩니다.
+          </p>
+        </div>
+      </div>
+
+      <!-- Related Articles Cross-Linking -->
+      <div class="my-10 pt-8 border-t border-white/[0.08]">
+        <h3 class="text-lg font-bold text-white mb-4">함께 읽으면 좋은 추천 칼럼</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <a href="article-atomic-morning-habits.html" class="p-4 rounded-xl bg-dawn-900/60 border border-white/[0.08] hover:border-amber-500/30 transition-all block group">
+            <span class="text-[11px] text-orange-400 font-semibold">습관 형성 심리학</span>
+            <h4 class="text-sm font-bold text-white group-hover:text-amber-300 transition-colors mt-1">지속 가능한 모닝 루틴의 심리학: 의지력 없이 21일 완성</h4>
+          </a>
+          <a href="article-digital-detox-dawn.html" class="p-4 rounded-xl bg-dawn-900/60 border border-white/[0.08] hover:border-amber-500/30 transition-all block group">
+            <span class="text-[11px] text-rose-400 font-semibold">디지털 웰니스</span>
+            <h4 class="text-sm font-bold text-white group-hover:text-amber-300 transition-colors mt-1">새벽의 사일런트 디톡스: 스마트폰 없는 첫 60분 도파민 리셋</h4>
+          </a>
+        </div>
+      </div>
+
       <!-- Back to Insights -->
-      <div class="pt-8 border-t border-white/[0.08] flex items-center justify-between">
+      <div class="pt-6 border-t border-white/[0.08] flex items-center justify-between">
         <a href="insights.html" class="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 font-semibold text-sm">
           <i data-lucide="arrow-left" class="w-4 h-4"></i>
           <span>인사이트 목록으로 돌아가기</span>
@@ -182,6 +251,7 @@
       </div>
       <div class="flex items-center gap-6">
         <a href="index.html" class="hover:text-slate-300">홈</a>
+        <a href="index.html#calculator" class="hover:text-slate-300">수면 계산기</a>
         <a href="insights.html" class="text-amber-400 font-medium">인사이트</a>
         <a href="privacy.html" class="hover:text-slate-300">개인정보처리방침</a>
         <a href="terms.html" class="hover:text-slate-300">이용약관</a>

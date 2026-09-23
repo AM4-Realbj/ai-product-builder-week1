@@ -7,6 +7,7 @@ const translations = {
     brand_subtitle: "Miracle Morning Lab",
     nav_vision: "철학과 비전",
     nav_solution: "솔루션 미리보기",
+    nav_calculator: "수면 계산기",
     nav_about: "회사 소개",
     nav_insights: "인사이트",
     nav_roadmap: "로드맵",
@@ -92,6 +93,37 @@ const translations = {
     step3_title: "dawn4 공식 런칭 & 글로벌 모닝 커뮤니티",
     step3_desc: "iOS 및 Android 앱 공식 스토어 출시, 글로벌 사일런트 메이트 네트워크 확장 및 AI 루틴 코칭 고도화.",
 
+    // Sleep Cycle & Morning Routine Calculator (Interactive)
+    calc_badge: "INTERACTIVE LAB",
+    calc_title: "수면 사이클 & 모닝 루틴 계산기",
+    calc_desc: "인간의 뇌는 90분 수면 사이클(REM/NREM) 단위로 회복됩니다. 수면 관성(Sleep Inertia)을 최소화하여 새벽 4시에 개운하게 눈뜰 수 있는 나만의 최적 수면 시간과 모닝 루틴을 설계해 보세요.",
+    calc_mode_wake: "기상 시간 기준",
+    calc_mode_sleep: "취침 시간 기준",
+    calc_label_wake_target: "목표 기상 시간 설정:",
+    calc_label_sleep_target: "목표 취침 시간 설정:",
+    calc_latency_note: "※ 평균 입면 소요 시간 15분을 자동 계산에 반영합니다.",
+    calc_cycle_5_title: "5 사이클 (7.5시간)",
+    calc_cycle_5_subtitle: "황금 밸런스 수면 (가장 권장)",
+    calc_cycle_5_desc: "충분한 서파 수면과 렘수면을 모두 만족하여 피로 회복과 인지 기능 극대화에 가장 이상적인 주기입니다.",
+    calc_cycle_6_title: "6 사이클 (9.0시간)",
+    calc_cycle_6_subtitle: "완전한 회복 수면",
+    calc_cycle_6_desc: "격렬한 육체 활동이나 고강도 뇌 피로가 누적된 날, 면역계 재생을 돕는 넉넉한 수면 주기입니다.",
+    calc_cycle_4_title: "4 사이클 (6.0시간)",
+    calc_cycle_4_subtitle: "고밀도 집중 수면",
+    calc_cycle_4_desc: "수면 효율이 높은 숙련자를 위한 루틴으로, 낮 시간 20분의 파워냅(Power Nap)과 병행하면 좋습니다.",
+    calc_routine_heading: "새벽 04:00 AM 기상 골든아워 타임라인",
+    calc_routine_step1_title: "바이오 페이징 기상 (REM 완료 시점)",
+    calc_routine_step1_desc: "급작스러운 고음 알람 없이 부드러운 사운드로 수면 관성을 5분 내 해소합니다.",
+    calc_routine_step2_title: "미온수 한 잔 & 새벽 공기 환기",
+    calc_routine_step2_desc: "밤새 손실된 수분을 보충하고 체온 조절 중추를 자극하여 전두엽을 예열합니다.",
+    calc_routine_step3_title: "사일런트 디톡스 & 모닝 페이지",
+    calc_routine_step3_desc: "스마트폰을 절대 켜지 않고 손글씨 메모나 가벼운 스트레칭으로 도파민 감도를 보호합니다.",
+    calc_routine_step4_title: "시간적 독점성 속 딥 워크 (Deep Work)",
+    calc_routine_step4_desc: "누구의 방해도 없는 90분간 내 인생에서 가장 중요한 본질 과업에 100% 몰입합니다.",
+    calc_btn_copy_routine: "나의 모닝 루틴 복사하기",
+    calc_btn_routine_copied: "루틴이 클립보드에 복사되었습니다! 🎉",
+    calc_read_science: "서카디언 리듬 과학 칼럼 읽기 →",
+
     // Partnership Form & Contact (Formspree)
     form_badge: "PARTNERSHIP INQUIRY",
     form_title: "제휴 및 비즈니스 문의",
@@ -153,6 +185,7 @@ const translations = {
     brand_subtitle: "Miracle Morning Lab",
     nav_vision: "Philosophy & Vision",
     nav_solution: "Solution Preview",
+    nav_calculator: "Sleep Calculator",
     nav_about: "About Us",
     nav_insights: "Insights",
     nav_roadmap: "Roadmap",
@@ -237,6 +270,37 @@ const translations = {
     step2_desc: "Closed pilot testing with initial cohorts and official pre-registration kickoff via this website.",
     step3_title: "Official Public Launch & Global Community",
     step3_desc: "Official App Store & Play Store launch, global silent network expansion, and advanced AI routine coaching.",
+
+    // Sleep Cycle & Morning Routine Calculator (Interactive)
+    calc_badge: "INTERACTIVE LAB",
+    calc_title: "Sleep Cycle & Morning Routine Calculator",
+    calc_desc: "The human brain cycles through 90-minute REM and Non-REM phases. Calculate your optimal bedtime and awakening windows to eliminate sleep inertia and rise at 4:00 AM with effortless mental clarity.",
+    calc_mode_wake: "Target Wake Time",
+    calc_mode_sleep: "Target Bedtime",
+    calc_label_wake_target: "Set Target Wake Time:",
+    calc_label_sleep_target: "Set Target Bedtime:",
+    calc_latency_note: "※ Automatically incorporates a 15-minute average sleep latency window.",
+    calc_cycle_5_title: "5 Cycles (7.5 Hours)",
+    calc_cycle_5_subtitle: "Golden Balance (Optimal)",
+    calc_cycle_5_desc: "The ideal circadian cycle balancing deep slow-wave and REM sleep for maximum cognitive restoration.",
+    calc_cycle_6_title: "6 Cycles (9.0 Hours)",
+    calc_cycle_6_subtitle: "Deep Recovery Sleep",
+    calc_cycle_6_desc: "Recommended after high-intensity physical exertion or cognitive strain to accelerate cellular renewal.",
+    calc_cycle_4_title: "4 Cycles (6.0 Hours)",
+    calc_cycle_4_subtitle: "High-Density Sprint",
+    calc_cycle_4_desc: "A streamlined cycle for experienced morning runners, ideally paired with a 20-minute midday power nap.",
+    calc_routine_heading: "04:00 AM Dawn Golden Hour Timeline",
+    calc_routine_step1_title: "Gentle Awakening at REM Boundary",
+    calc_routine_step1_desc: "Wake smoothly with soft ambient acoustic cues, eliminating sleep inertia within 5 minutes.",
+    calc_routine_step2_title: "Hydration & Fresh Air Ventilation",
+    calc_routine_step2_desc: "Rehydrate brain cells with warm water and invite crisp dawn air to elevate core temperature.",
+    calc_routine_step3_title: "Silent Detox & Analog Journaling",
+    calc_routine_step3_desc: "Zero screens. Protect your dopamine baseline through handwriting notes or light mobility work.",
+    calc_routine_step4_title: "Deep Work in Temporal Solitude",
+    calc_routine_step4_desc: "Invest 90 uninterrupted minutes into your most critical high-leverage vision or project.",
+    calc_btn_copy_routine: "Copy My Morning Routine",
+    calc_btn_routine_copied: "Routine copied to clipboard! 🎉",
+    calc_read_science: "Read Circadian Science Article →",
 
     // Partnership Form & Contact (Formspree)
     form_badge: "PARTNERSHIP INQUIRY",
@@ -342,6 +406,11 @@ window.changeLanguage = function(lang) {
 
   // Update clock widget
   updateDawnClock();
+
+  // Recalculate sleep cycles in new language
+  if (typeof calculateSleepCycles === 'function') {
+    calculateSleepCycles();
+  }
 };
 
 function updateLangButtonStyles() {
@@ -559,4 +628,229 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // Initialize Sleep Cycle Calculator
+  calculateSleepCycles();
 });
+
+// Sleep Calculator Logic
+let calcMode = 'wake'; // 'wake' or 'sleep'
+
+window.setCalcMode = function(mode) {
+  calcMode = mode;
+  const wakeBtn = document.getElementById('calcModeWakeBtn');
+  const sleepBtn = document.getElementById('calcModeSleepBtn');
+  const targetLabel = document.getElementById('calcTargetLabel');
+  const targetInput = document.getElementById('calcTargetTime');
+
+  if (mode === 'wake') {
+    if (wakeBtn) wakeBtn.className = 'flex-1 md:flex-none px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-gradient-to-r from-amber-500 to-orange-500 text-white shadow-sm flex items-center justify-center gap-2';
+    if (sleepBtn) sleepBtn.className = 'flex-1 md:flex-none px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all text-slate-400 hover:text-white flex items-center justify-center gap-2';
+    if (targetLabel) targetLabel.textContent = translations[currentLang].calc_label_wake_target;
+    if (targetInput && targetInput.value === '22:00') targetInput.value = '04:00';
+  } else {
+    if (sleepBtn) sleepBtn.className = 'flex-1 md:flex-none px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-gradient-to-r from-amber-500 to-orange-500 text-white shadow-sm flex items-center justify-center gap-2';
+    if (wakeBtn) wakeBtn.className = 'flex-1 md:flex-none px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all text-slate-400 hover:text-white flex items-center justify-center gap-2';
+    if (targetLabel) targetLabel.textContent = translations[currentLang].calc_label_sleep_target;
+    if (targetInput && targetInput.value === '04:00') targetInput.value = '22:00';
+  }
+
+  calculateSleepCycles();
+};
+
+window.calculateSleepCycles = function() {
+  const targetInput = document.getElementById('calcTargetTime');
+  const container = document.getElementById('calcCyclesContainer');
+  const timelineHeading = document.getElementById('routineTimelineHeading');
+  const routineContainer = document.getElementById('routineStepsContainer');
+  if (!targetInput || !container) return;
+
+  const [tHours, tMinutes] = targetInput.value.split(':').map(Number);
+  const targetMinutesTotal = (tHours * 60) + tMinutes;
+  const latency = 15; // 15 mins to fall asleep
+
+  // Format minutes into 12-hour AM/PM string
+  const formatTime = (totalMins) => {
+    let normalized = ((totalMins % 1440) + 1440) % 1440;
+    const h24 = Math.floor(normalized / 60);
+    const m = normalized % 60;
+    const period = h24 >= 12 ? 'PM' : 'AM';
+    const h12 = h24 % 12 === 0 ? 12 : h24 % 12;
+    const pad = (n) => String(n).padStart(2, '0');
+    return `${pad(h12)}:${pad(m)} ${period}`;
+  };
+
+  const cycleDefinitions = [
+    {
+      cycles: 5,
+      hours: 7.5,
+      isRec: true,
+      badge: currentLang === 'ko' ? '⭐ 최적 추천' : '⭐ OPTIMAL CHOICE',
+      title: translations[currentLang].calc_cycle_5_title,
+      subtitle: translations[currentLang].calc_cycle_5_subtitle,
+      desc: translations[currentLang].calc_cycle_5_desc,
+      borderClass: 'border-amber-500/50 bg-dawn-900 ring-1 ring-amber-500/30'
+    },
+    {
+      cycles: 6,
+      hours: 9.0,
+      isRec: false,
+      badge: currentLang === 'ko' ? '충분한 휴식' : 'DEEP REST',
+      title: translations[currentLang].calc_cycle_6_title,
+      subtitle: translations[currentLang].calc_cycle_6_subtitle,
+      desc: translations[currentLang].calc_cycle_6_desc,
+      borderClass: 'border-white/[0.08] bg-dawn-900/60'
+    },
+    {
+      cycles: 4,
+      hours: 6.0,
+      isRec: false,
+      badge: currentLang === 'ko' ? '고효율 단축' : 'POWER SPRINT',
+      title: translations[currentLang].calc_cycle_4_title,
+      subtitle: translations[currentLang].calc_cycle_4_subtitle,
+      desc: translations[currentLang].calc_cycle_4_desc,
+      borderClass: 'border-white/[0.08] bg-dawn-900/60'
+    }
+  ];
+
+  let calculatedWakeHour = tHours;
+  let calculatedWakeMinute = tMinutes;
+
+  if (calcMode === 'sleep') {
+    const wake5Mins = targetMinutesTotal + latency + (5 * 90);
+    const norm = ((wake5Mins % 1440) + 1440) % 1440;
+    calculatedWakeHour = Math.floor(norm / 60);
+    calculatedWakeMinute = norm % 60;
+  }
+
+  container.innerHTML = cycleDefinitions.map(item => {
+    let resultTimeFormatted = '';
+    let resultLabel = '';
+
+    if (calcMode === 'wake') {
+      const bedtimeTotal = targetMinutesTotal - (item.cycles * 90) - latency;
+      resultTimeFormatted = formatTime(bedtimeTotal);
+      resultLabel = currentLang === 'ko' ? '추천 취침 시간' : 'Optimal Bedtime';
+    } else {
+      const wakeTotal = targetMinutesTotal + latency + (item.cycles * 90);
+      resultTimeFormatted = formatTime(wakeTotal);
+      resultLabel = currentLang === 'ko' ? '추천 기상 시간' : 'Optimal Wake Time';
+    }
+
+    return `
+      <div class="p-6 rounded-2xl ${item.borderClass} flex flex-col justify-between transition-all hover:scale-[1.02]">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-full ${item.isRec ? 'bg-amber-500/20 text-amber-300 border border-amber-500/30' : 'bg-white/[0.05] text-slate-400'}">
+              ${item.badge}
+            </span>
+            <span class="text-xs font-mono text-slate-400">${item.cycles} × 90m</span>
+          </div>
+          <div class="text-xs text-slate-400 mb-1">${resultLabel}</div>
+          <div class="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white to-amber-200 font-mono mb-2">
+            ${resultTimeFormatted}
+          </div>
+          <div class="text-sm font-bold text-white mb-2">${item.title}</div>
+          <p class="text-xs text-slate-300 leading-relaxed mb-4">${item.desc}</p>
+        </div>
+        <div class="pt-3 border-t border-white/[0.06] text-[11px] text-slate-400 flex items-center justify-between">
+          <span>${currentLang === 'ko' ? '수면 지속시간' : 'Total Duration'}</span>
+          <strong class="text-amber-400 font-mono">${item.hours}${currentLang === 'ko' ? '시간' : 'h'}</strong>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  // Update Morning Routine Timeline
+  const wakeMinsTotal = (calculatedWakeHour * 60) + calculatedWakeMinute;
+  const wakeStr = formatTime(wakeMinsTotal);
+
+  if (timelineHeading) {
+    timelineHeading.textContent = currentLang === 'ko'
+      ? `${wakeStr} 기상 골든아워 집중 루틴`
+      : `${wakeStr} Wake-Up Golden Hour Sequence`;
+  }
+
+  const step1Time = formatTime(wakeMinsTotal);
+  const step2Time = formatTime(wakeMinsTotal + 5);
+  const step3Time = formatTime(wakeMinsTotal + 15);
+  const step4Time = formatTime(wakeMinsTotal + 30);
+
+  const steps = [
+    {
+      time: step1Time,
+      title: translations[currentLang].calc_routine_step1_title,
+      desc: translations[currentLang].calc_routine_step1_desc
+    },
+    {
+      time: step2Time,
+      title: translations[currentLang].calc_routine_step2_title,
+      desc: translations[currentLang].calc_routine_step2_desc
+    },
+    {
+      time: step3Time,
+      title: translations[currentLang].calc_routine_step3_title,
+      desc: translations[currentLang].calc_routine_step3_desc
+    },
+    {
+      time: step4Time,
+      title: translations[currentLang].calc_routine_step4_title,
+      desc: translations[currentLang].calc_routine_step4_desc
+    }
+  ];
+
+  if (routineContainer) {
+    routineContainer.innerHTML = steps.map(s => `
+      <div class="flex items-start gap-4 p-3.5 rounded-xl bg-white/[0.02] border border-white/[0.04] hover:bg-white/[0.04] transition-all">
+        <div class="text-xs font-mono font-bold text-amber-400 shrink-0 w-20 pt-0.5">${s.time}</div>
+        <div class="flex-1">
+          <div class="text-sm font-bold text-white mb-0.5">${s.title}</div>
+          <div class="text-xs text-slate-400 leading-relaxed">${s.desc}</div>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  if (window.lucide) {
+    window.lucide.createIcons();
+  }
+};
+
+window.copyRoutineSchedule = async function() {
+  const heading = document.getElementById('routineTimelineHeading')?.textContent || 'dawn4 모닝 루틴';
+  const stepsEls = document.querySelectorAll('#routineStepsContainer > div');
+  let scheduleText = `🌅 [dawn4] ${heading}\n\n`;
+
+  stepsEls.forEach(el => {
+    const time = el.querySelector('.font-mono')?.textContent.trim() || '';
+    const title = el.querySelector('.text-white')?.textContent.trim() || '';
+    const desc = el.querySelector('.text-slate-400')?.textContent.trim() || '';
+    scheduleText += `• ${time} | ${title}\n  - ${desc}\n`;
+  });
+
+  scheduleText += `\n🔗 https://ai-product-builder-week1.pages.dev/`;
+
+  const btnText = document.getElementById('copyRoutineBtnText');
+  const original = translations[currentLang].calc_btn_copy_routine;
+  const copied = translations[currentLang].calc_btn_routine_copied;
+
+  const showCopied = () => {
+    if (btnText) btnText.textContent = copied;
+    setTimeout(() => {
+      if (btnText) btnText.textContent = original;
+    }, 2500);
+  };
+
+  try {
+    await navigator.clipboard.writeText(scheduleText);
+    showCopied();
+  } catch (err) {
+    const t = document.createElement('textarea');
+    t.value = scheduleText;
+    document.body.appendChild(t);
+    t.select();
+    document.execCommand('copy');
+    document.body.removeChild(t);
+    showCopied();
+  }
+};

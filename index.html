@@ -102,6 +102,7 @@
       <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300">
         <a href="#vision" class="hover:text-amber-400 transition-colors" data-i18n="nav_vision">철학과 비전</a>
         <a href="#solution" class="hover:text-amber-400 transition-colors" data-i18n="nav_solution">솔루션 미리보기</a>
+        <a href="#calculator" class="hover:text-amber-400 transition-colors text-amber-300/90 font-semibold" data-i18n="nav_calculator">수면 계산기</a>
         <a href="#about" class="hover:text-amber-400 transition-colors" data-i18n="nav_about">회사 소개</a>
         <a href="insights.html" class="hover:text-amber-400 transition-colors flex items-center gap-1" data-i18n="nav_insights">
           <span>인사이트</span>
@@ -143,6 +144,7 @@
       <div class="flex flex-col gap-4 text-base font-medium">
         <a href="#vision" class="text-slate-300 hover:text-amber-400 py-1 mobile-link" data-i18n="nav_vision">철학과 비전</a>
         <a href="#solution" class="text-slate-300 hover:text-amber-400 py-1 mobile-link" data-i18n="nav_solution">솔루션 미리보기</a>
+        <a href="#calculator" class="text-amber-400 font-semibold py-1 mobile-link" data-i18n="nav_calculator">수면 계산기</a>
         <a href="#about" class="text-slate-300 hover:text-amber-400 py-1 mobile-link" data-i18n="nav_about">회사 소개</a>
         <a href="insights.html" class="text-amber-300 hover:text-amber-400 py-1 flex items-center justify-between" data-i18n="nav_insights">
           <span>인사이트 (연구 & 칼럼)</span>
@@ -598,6 +600,118 @@
       </div>
     </section>
 
+    <!-- Interactive Sleep Cycle & Morning Routine Calculator (AdSense Two-Way Experience) -->
+    <section id="calculator" class="py-24 px-6 bg-dawn-950 border-t border-white/[0.06] relative overflow-hidden">
+      <div class="ambient-glow top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-amber-500/10 w-[550px] h-[550px] rounded-full blur-[140px] pointer-events-none"></div>
+
+      <div class="max-w-5xl mx-auto relative z-10">
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20 mb-3">
+            <i data-lucide="calculator" class="w-3.5 h-3.5"></i>
+            <span data-i18n="calc_badge">INTERACTIVE LAB</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4" data-i18n="calc_title">
+            수면 사이클 & 모닝 루틴 계산기
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed" data-i18n="calc_desc">
+            인간의 뇌는 90분 수면 사이클(REM/NREM) 단위로 회복됩니다. 수면 관성(Sleep Inertia)을 최소화하여 새벽 4시에 개운하게 눈뜰 수 있는 나만의 최적 수면 시간과 모닝 루틴을 설계해 보세요.
+          </p>
+        </div>
+
+        <!-- Calculator Interactive Card -->
+        <div class="p-6 sm:p-10 rounded-3xl bg-gradient-to-b from-dawn-850 to-dawn-900 border border-white/[0.1] shadow-2xl backdrop-blur-xl">
+          <!-- Control Bar: Mode Toggle + Target Time Input -->
+          <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-6 border-b border-white/[0.08]">
+            <!-- Mode Switcher -->
+            <div class="flex items-center p-1 rounded-xl bg-white/[0.05] border border-white/[0.1] w-full md:w-auto">
+              <button
+                id="calcModeWakeBtn"
+                class="flex-1 md:flex-none px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-gradient-to-r from-amber-500 to-orange-500 text-white shadow-sm flex items-center justify-center gap-2"
+                onclick="setCalcMode('wake')"
+              >
+                <i data-lucide="alarm-clock" class="w-4 h-4"></i>
+                <span data-i18n="calc_mode_wake">기상 시간 기준</span>
+              </button>
+              <button
+                id="calcModeSleepBtn"
+                class="flex-1 md:flex-none px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all text-slate-400 hover:text-white flex items-center justify-center gap-2"
+                onclick="setCalcMode('sleep')"
+              >
+                <i data-lucide="moon" class="w-4 h-4"></i>
+                <span data-i18n="calc_mode_sleep">취침 시간 기준</span>
+              </button>
+            </div>
+
+            <!-- Target Time Selector -->
+            <div class="flex items-center gap-3 w-full md:w-auto justify-end">
+              <label for="calcTargetTime" id="calcTargetLabel" class="text-xs sm:text-sm text-slate-300 font-medium shrink-0 flex items-center gap-1.5" data-i18n="calc_label_wake_target">
+                목표 기상 시간 설정:
+              </label>
+              <div class="relative">
+                <input
+                  type="time"
+                  id="calcTargetTime"
+                  value="04:00"
+                  class="px-4 py-2 rounded-xl bg-dawn-950 border border-amber-500/40 text-amber-300 font-mono font-bold text-base focus:outline-none focus:ring-2 focus:ring-amber-500/30 transition-all cursor-pointer"
+                  onchange="calculateSleepCycles()"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-2 pb-6 text-right">
+            <span class="text-xs text-slate-400 italic" data-i18n="calc_latency_note">
+              ※ 평균 입면 소요 시간 15분을 자동 계산에 반영합니다.
+            </span>
+          </div>
+
+          <!-- Dynamic Results Cards (3 Cycles Display) -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-5" id="calcCyclesContainer">
+            <!-- Rendered by JS -->
+          </div>
+
+          <!-- Morning Routine Timeline Preview -->
+          <div class="mt-10 p-6 sm:p-8 rounded-2xl bg-dawn-950/80 border border-white/[0.08]">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-4 border-b border-white/[0.06]">
+              <div class="flex items-center gap-2.5">
+                <div class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400">
+                  <i data-lucide="sparkles" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <h3 class="text-base font-bold text-white" id="routineTimelineHeading" data-i18n="calc_routine_heading">새벽 04:00 AM 기상 골든아워 타임라인</h3>
+                  <p class="text-xs text-slate-400">수면 관성을 극복하고 뇌의 알파파를 극대화하는 60분 시퀀스</p>
+                </div>
+              </div>
+
+              <!-- Copy Routine Button -->
+              <button
+                id="copyRoutineBtn"
+                onclick="copyRoutineSchedule()"
+                class="px-4 py-2 rounded-xl bg-white/[0.06] hover:bg-white/[0.1] border border-white/[0.12] text-xs font-semibold text-slate-200 hover:text-white transition-all flex items-center justify-center gap-2 self-start sm:self-auto shrink-0"
+              >
+                <i data-lucide="copy" class="w-3.5 h-3.5 text-amber-400"></i>
+                <span id="copyRoutineBtnText" data-i18n="calc_btn_copy_routine">나의 모닝 루틴 복사하기</span>
+              </button>
+            </div>
+
+            <!-- Timeline Steps -->
+            <div class="space-y-3" id="routineStepsContainer">
+              <!-- Rendered by JS -->
+            </div>
+
+            <!-- Link to Science Deep Dive -->
+            <div class="mt-6 pt-4 border-t border-white/[0.06] flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
+              <span class="text-slate-400">어떤 원리로 수면 관성이 사라지고 뇌파가 깨어나는지 궁금하신가요?</span>
+              <a href="article-circadian-rhythm.html" class="text-amber-400 hover:text-amber-300 font-semibold inline-flex items-center gap-1 transition-colors" data-i18n="calc_read_science">
+                서카디언 리듬 과학 칼럼 읽기 →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Featured Insights & Research (AdSense High-Value Content) -->
     <section id="featured-insights" class="py-24 px-6 bg-dawn-900/60 border-t border-white/[0.06]">
       <div class="max-w-6xl mx-auto">
@@ -888,6 +1002,7 @@
         <a href="insights.html" class="text-amber-400 font-medium hover:text-amber-300 transition-colors" data-i18n="footer_insights">모닝 인사이트</a>
         <a href="#vision" class="hover:text-slate-300 transition-colors" data-i18n="footer_vision">비전</a>
         <a href="#solution" class="hover:text-slate-300 transition-colors" data-i18n="footer_solution">솔루션</a>
+        <a href="#calculator" class="hover:text-slate-300 transition-colors" data-i18n="nav_calculator">수면 계산기</a>
         <a href="#about" class="hover:text-slate-300 transition-colors" data-i18n="footer_about">회사소개</a>
         <a href="#contact" class="hover:text-slate-300 transition-colors" data-i18n="footer_contact">제휴문의</a>
         <a href="privacy.html" class="hover:text-amber-400 transition-colors" data-i18n="footer_privacy">개인정보처리방침</a>
