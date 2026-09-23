@@ -1,34 +1,42 @@
 # dawn4 (주식회사 dawn4) - 회사 소개 및 프로덕트 티저 웹사이트
 
 > **"세상이 잠든 새벽 4시, 당신의 기적이 시작됩니다."**  
+> **"While the world sleeps at 4:00 AM, your miracle begins."**  
 > dawn4는 지속 가능한 아침의 몰입과 성장을 이끄는 차세대 미라클 모닝 라이프테크 스타트업입니다.
+
+---
+
+## 🌐 라이브 배포 주소 (Live Demo)
+👉 **공식 배포 웹사이트:** [https://am4-realbj.github.io/ai-product-builder-week1/](https://am4-realbj.github.io/ai-product-builder-week1/)
 
 ---
 
 ## 🌅 프로젝트 개요
 본 저장소는 미라클 모닝 솔루션을 준비 중인 **주식회사 dawn4 (dawn4 Inc.)**의 공식 회사 소개 및 프로덕트 티저 랜딩 페이지입니다.
 
+- **글로벌 다국어 지원**: 한국어(KR) 및 영어(EN) 원클릭 전환 지원 (로컬스토리지 상태 보존)
 - **프로덕트 상태**: 현재 핵심 R&D 및 프로토타입 개발 단계 (사전 예약은 추후 프로덕트 공개 시 오픈 예정)
 - **비주얼 컨셉**: 새벽 4시의 고요함과 몰입을 상징하는 미드나잇 블루/딥 네이비 & 선라이즈 골드/오렌지 포인트 다크 테마
 
 ---
 
 ## 🛠 기술 스택
-- **HTML5**: 시맨틱 웹 마크업 및 접근성 준수
-- **Tailwind CSS (CDN)**: 커스텀 컬러(dawn-950, sunrise-gradient 등) 테마 구성 및 반응형 레이아웃
-- **Vanilla JavaScript**: 실시간 새벽 4시 카운트다운/골든아워 엔진, 이메일 원클릭 복사, 동적 모바일 내비게이션
+- **HTML5**: 시맨틱 웹 마크업, 접근성 및 `data-i18n` 다국어 구조
+- **Tailwind CSS (CDN)**: 커스텀 컬러(`dawn-950`, `sunrise-gradient` 등) 테마 구성 및 완벽 반응형 레이아웃
+- **Vanilla JavaScript**: 실시간 새벽 4시 카운트다운/골든아워 엔진, 다국어 전환 엔진, 이메일 원클릭 복사, 동적 모바일 내비게이션
 - **Lucide Icons**: 모던 벡터 아이콘
 - **Pretendard Font**: 고품질 한글/영문 타이포그래피
+- **GitHub Pages**: 자동 정적 호스팅 배포
 
 ---
 
 ## 📂 파일 구조
 ```
 ai-product-builder-week1/
-├── index.html     # 메인 랜딩 페이지 (시맨틱 구조 & 반응형 레이아웃)
+├── index.html     # 메인 랜딩 페이지 (시맨틱 구조, 반응형, 다국어 마크업)
 ├── styles.css     # 새벽 앰비언트 글로우 애니메이션, 커스텀 스크롤바, 카드 스타일
-├── app.js         # 실시간 시계 위젯, 인용구 로테이션, 원클릭 이메일 복사 등
-└── README.md      # 프로젝트 설명 및 실행 가이드
+├── app.js         # 다국어(한국어/영어) 사전 & 전환, 실시간 시계 위젯, 원클릭 이메일 복사
+└── README.md      # 프로젝트 설명 및 배포 안내
 ```
 
 ---
@@ -37,7 +45,7 @@ ai-product-builder-week1/
 
 별도의 복잡한 패키지 설치나 빌드 과정 없이, 브라우저에서 바로 열거나 간이 웹 서버를 통해 실행할 수 있습니다.
 
-### 방법 1: Python 간단 서버 실행 (권장)
+### 방법 1: Python 간단 서버 실행
 터미널에서 아래 명령어를 실행한 후 브라우저에서 `http://localhost:3000` 접속:
 ```bash
 python3 -m http.server 3000
@@ -51,7 +59,7 @@ npx serve . -p 3000
 ---
 
 ## 📌 주요 구성 섹션
-1. **Hero Section**: dawn4 브랜드 슬로건, 프로덕트 개발 중 알림 배너, 실시간 새벽 시간 엔진 위젯
+1. **Hero Section**: dawn4 브랜드 슬로건, 글로벌 다국어 토글(KR/EN), 프로덕트 개발 중 알림 배너, 실시간 새벽 시간 엔진 위젯
 2. **Philosophy & Mission (철학)**: 기존 미라클 모닝의 문제점(알람 스트레스, 무계획, 작심삼일) 분석 및 dawn4의 해결 접근법
 3. **Product Teaser (솔루션 미리보기)**:
    - Bio-Rhythm Smart Wake (바이오리듬 기상)

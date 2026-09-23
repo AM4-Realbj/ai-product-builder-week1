@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>dawn4 | 새벽 4시, 당신의 기적이 시작되는 시간</title>
-  <meta name="description" content="dawn4는 지속 가능한 아침의 몰입과 성장을 이끄는 차세대 미라클 모닝 솔루션을 만듭니다." />
+  <title id="pageTitle">dawn4 | 새벽 4시, 당신의 기적이 시작되는 시간</title>
+  <meta name="description" id="metaDescription" content="dawn4는 지속 가능한 아침의 몰입과 성장을 이끄는 차세대 미라클 모닝 솔루션을 만듭니다." />
   
   <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%' y1='100%' x2='100%' y2='0%'><stop offset='0%' stop-color='%23f59e0b'/><stop offset='100%' stop-color='%23ec4899'/></linearGradient></defs><circle cx='50' cy='50' r='45' fill='%2307090e'/><path d='M25 65 A25 25 0 0 1 75 65 Z' fill='url(%23g)'/><circle cx='50' cy='42' r='8' fill='%23fef08a'/></svg>" />
@@ -73,45 +73,67 @@
             dawn4
             <span class="inline-block w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
           </span>
-          <span class="text-[10px] tracking-widest text-slate-400 font-medium uppercase">Miracle Morning Lab</span>
+          <span class="text-[10px] tracking-widest text-slate-400 font-medium uppercase" data-i18n="brand_subtitle">Miracle Morning Lab</span>
         </div>
       </a>
 
       <!-- Desktop Navigation Links -->
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
-        <a href="#vision" class="hover:text-amber-400 transition-colors">철학과 비전</a>
-        <a href="#solution" class="hover:text-amber-400 transition-colors">솔루션 미리보기</a>
-        <a href="#about" class="hover:text-amber-400 transition-colors">회사 소개</a>
-        <a href="#roadmap" class="hover:text-amber-400 transition-colors">로드맵</a>
-        <a href="#contact" class="hover:text-amber-400 transition-colors">문의하기</a>
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="#vision" class="hover:text-amber-400 transition-colors" data-i18n="nav_vision">철학과 비전</a>
+        <a href="#solution" class="hover:text-amber-400 transition-colors" data-i18n="nav_solution">솔루션 미리보기</a>
+        <a href="#about" class="hover:text-amber-400 transition-colors" data-i18n="nav_about">회사 소개</a>
+        <a href="#roadmap" class="hover:text-amber-400 transition-colors" data-i18n="nav_roadmap">로드맵</a>
+        <a href="#contact" class="hover:text-amber-400 transition-colors" data-i18n="nav_contact">문의하기</a>
       </nav>
 
-      <!-- Right Action / Status Badge -->
+      <!-- Right Action: Status Badge & Language Switcher -->
       <div class="hidden sm:flex items-center gap-3">
+        <!-- Status Badge -->
         <div class="px-3.5 py-1.5 rounded-full text-xs font-medium border border-amber-500/30 bg-amber-500/10 text-amber-300 flex items-center gap-2 shadow-inner">
           <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
-          <span>프로덕트 준비 중 (Coming Soon)</span>
+          <span data-i18n="nav_status">프로덕트 준비 중 (Coming Soon)</span>
+        </div>
+
+        <!-- Language Switcher Pill -->
+        <div class="flex items-center p-1 rounded-full bg-white/[0.06] border border-white/[0.1] text-xs font-bold" role="group" aria-label="Language Selector">
+          <button id="langKoDesktop" class="px-2.5 py-1 rounded-full transition-all text-white bg-gradient-to-r from-amber-500 to-orange-500 shadow-sm" onclick="changeLanguage('ko')">KR</button>
+          <button id="langEnDesktop" class="px-2.5 py-1 rounded-full transition-all text-slate-400 hover:text-white" onclick="changeLanguage('en')">EN</button>
         </div>
       </div>
 
-      <!-- Mobile Menu Button -->
-      <button id="mobileMenuBtn" aria-label="메뉴 열기" class="md:hidden p-2 text-slate-400 hover:text-white focus:outline-none">
-        <i data-lucide="menu" class="w-6 h-6"></i>
-      </button>
+      <!-- Mobile Right Controls (Lang + Menu button) -->
+      <div class="flex items-center gap-2 lg:hidden">
+        <div class="flex items-center p-0.5 rounded-full bg-white/[0.06] border border-white/[0.1] text-xs font-bold sm:hidden">
+          <button id="langKoMobileNav" class="px-2 py-0.5 rounded-full transition-all text-white bg-gradient-to-r from-amber-500 to-orange-500" onclick="changeLanguage('ko')">KR</button>
+          <button id="langEnMobileNav" class="px-2 py-0.5 rounded-full transition-all text-slate-400 hover:text-white" onclick="changeLanguage('en')">EN</button>
+        </div>
+        <button id="mobileMenuBtn" aria-label="메뉴 열기" class="p-2 text-slate-400 hover:text-white focus:outline-none">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
     </div>
 
     <!-- Mobile Drawer -->
-    <div id="mobileMenu" class="hidden md:hidden bg-dawn-900/95 border-b border-white/10 px-6 py-5 transition-all">
+    <div id="mobileMenu" class="hidden lg:hidden bg-dawn-900/98 border-b border-white/10 px-6 py-5 transition-all">
       <div class="flex flex-col gap-4 text-base font-medium">
-        <a href="#vision" class="text-slate-300 hover:text-amber-400 py-1 mobile-link">철학과 비전</a>
-        <a href="#solution" class="text-slate-300 hover:text-amber-400 py-1 mobile-link">솔루션 미리보기</a>
-        <a href="#about" class="text-slate-300 hover:text-amber-400 py-1 mobile-link">회사 소개</a>
-        <a href="#roadmap" class="text-slate-300 hover:text-amber-400 py-1 mobile-link">로드맵</a>
-        <a href="#contact" class="text-slate-300 hover:text-amber-400 py-1 mobile-link">문의하기</a>
-        <div class="pt-3 border-t border-white/10">
-          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium bg-amber-500/10 text-amber-300 border border-amber-500/20">
+        <a href="#vision" class="text-slate-300 hover:text-amber-400 py-1 mobile-link" data-i18n="nav_vision">철학과 비전</a>
+        <a href="#solution" class="text-slate-300 hover:text-amber-400 py-1 mobile-link" data-i18n="nav_solution">솔루션 미리보기</a>
+        <a href="#about" class="text-slate-300 hover:text-amber-400 py-1 mobile-link" data-i18n="nav_about">회사 소개</a>
+        <a href="#roadmap" class="text-slate-300 hover:text-amber-400 py-1 mobile-link" data-i18n="nav_roadmap">로드맵</a>
+        <a href="#contact" class="text-slate-300 hover:text-amber-400 py-1 mobile-link" data-i18n="nav_contact">문의하기</a>
+        
+        <div class="pt-4 border-t border-white/10 flex flex-col gap-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium bg-amber-500/10 text-amber-300 border border-amber-500/20 w-fit">
             <span class="w-2 h-2 rounded-full bg-amber-400"></span>
-            프로덕트 준비 중 (Coming Soon)
+            <span data-i18n="nav_status">프로덕트 준비 중 (Coming Soon)</span>
+          </div>
+
+          <div class="flex items-center gap-2 pt-1">
+            <span class="text-xs text-slate-400" data-i18n="lang_select_label">언어 선택:</span>
+            <div class="flex items-center p-0.5 rounded-full bg-white/[0.06] border border-white/[0.1] text-xs font-bold">
+              <button id="langKoDrawer" class="px-3 py-1 rounded-full transition-all text-white bg-gradient-to-r from-amber-500 to-orange-500" onclick="changeLanguage('ko')">한국어</button>
+              <button id="langEnDrawer" class="px-3 py-1 rounded-full transition-all text-slate-400 hover:text-white" onclick="changeLanguage('en')">English</button>
+            </div>
           </div>
         </div>
       </div>
@@ -125,24 +147,24 @@
         <!-- Notification Tag -->
         <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold bg-white/[0.04] border border-white/[0.12] text-slate-300 mb-8 backdrop-blur-md hover:border-amber-500/40 transition-all duration-300">
           <span class="px-2 py-0.5 rounded-full bg-gradient-to-r from-amber-500 to-rose-500 text-white text-[11px] font-bold">NEXT HORIZON</span>
-          <span class="text-slate-300">새로운 미라클 모닝 생태계를 짓고 있습니다</span>
+          <span class="text-slate-300" data-i18n="hero_tag">새로운 미라클 모닝 생태계를 짓고 있습니다</span>
           <i data-lucide="sparkles" class="w-3.5 h-3.5 text-amber-400"></i>
         </div>
 
         <!-- Main Headline -->
-        <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white leading-[1.15] mb-8">
+        <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white leading-[1.15] mb-8" data-i18n-html="hero_title">
           세상이 잠든 <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-rose-400">새벽 4시</span>,<br class="hidden sm:inline" />
           당신의 기적이 시작됩니다
         </h1>
 
         <!-- Subtitle -->
-        <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto font-normal leading-relaxed mb-10">
+        <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto font-normal leading-relaxed mb-10" data-i18n-html="hero_desc">
           무리한 알람에 시달리는 고통스러운 기상이 아닙니다.<br class="hidden sm:inline" />
           <strong class="text-white font-medium">dawn4</strong>는 온전한 나를 마주하는 새벽의 고요함을<br class="hidden sm:inline" />
           가장 확실한 삶의 성장 동력으로 바꾸는 솔루션을 준비하고 있습니다.
         </p>
 
-        <!-- Product Status Banner (No pre-order yet, clearly coming soon) -->
+        <!-- Product Status Banner (Clearly coming soon) -->
         <div class="max-w-xl mx-auto p-5 rounded-2xl bg-dawn-900/90 border border-amber-500/30 shadow-2xl shadow-orange-950/40 backdrop-blur-xl mb-12">
           <div class="flex items-start sm:items-center gap-4 text-left">
             <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center shrink-0 text-amber-400">
@@ -150,10 +172,10 @@
             </div>
             <div class="flex-1">
               <div class="flex items-center gap-2">
-                <span class="text-sm font-semibold text-white">솔루션 R&D 개발 진행 중</span>
+                <span class="text-sm font-semibold text-white" data-i18n="hero_status_title">솔루션 R&D 개발 진행 중</span>
                 <span class="text-[11px] px-2 py-0.5 rounded bg-amber-400/20 text-amber-300 font-medium">Launch in 2026</span>
               </div>
-              <p class="text-xs sm:text-sm text-slate-400 mt-0.5">
+              <p class="text-xs sm:text-sm text-slate-400 mt-0.5" data-i18n-html="hero_status_desc">
                 현재 프로덕트의 완성도 높은 경험을 위해 비공개 개발 중입니다.<br class="hidden sm:inline" />
                 정식 사전 등록 및 얼리액세스는 추후 본 홈페이지를 통해 안내됩니다.
               </p>
@@ -165,14 +187,14 @@
         <div class="inline-flex flex-col sm:flex-row items-center gap-4 px-6 py-4 rounded-2xl bg-white/[0.03] border border-white/[0.08] backdrop-blur-md">
           <div class="flex items-center gap-3">
             <div class="w-3 h-3 rounded-full bg-emerald-400 animate-pulse"></div>
-            <span class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Live Time Engine</span>
+            <span class="text-xs uppercase tracking-wider text-slate-400 font-semibold" data-i18n="live_engine_badge">Live Time Engine</span>
           </div>
           <div class="h-4 w-[1px] bg-white/10 hidden sm:block"></div>
           <div class="text-sm font-mono text-amber-300 font-medium" id="liveClockDisplay">
             Calculating dawn time...
           </div>
           <div class="h-4 w-[1px] bg-white/10 hidden sm:block"></div>
-          <span class="text-xs text-slate-400" id="dawnQuoteText">
+          <span class="text-xs text-slate-400 transition-opacity duration-300" id="dawnQuoteText">
             "가장 깊은 새벽은 언제나 가장 밝은 아침을 부릅니다."
           </span>
         </div>
@@ -183,12 +205,12 @@
     <section id="vision" class="py-24 px-6 border-t border-white/[0.06] relative">
       <div class="max-w-6xl mx-auto">
         <div class="text-center max-w-3xl mx-auto mb-16">
-          <span class="text-xs font-bold tracking-widest text-amber-400 uppercase">Philosophy & Mission</span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3 mb-6 tracking-tight">
+          <span class="text-xs font-bold tracking-widest text-amber-400 uppercase" data-i18n="vision_tag">Philosophy & Mission</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3 mb-6 tracking-tight" data-i18n-html="vision_title">
             왜 사람들은 매번 <br class="sm:hidden" />
             <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-400">미라클 모닝</span>에 실패할까요?
           </h2>
-          <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+          <p class="text-slate-300 text-base sm:text-lg leading-relaxed" data-i18n-html="vision_desc">
             문제는 여러분의 '의지력'이 아닙니다.<br class="hidden sm:inline" />
             자극적인 알람과 무작정 일어나는 강박은 뇌와 몸에 피로만 남길 뿐입니다.<br />
             dawn4는 과학적 수면 리듬과 자연스러운 몰입 설계로 새로운 기상 패러다임을 만듭니다.
@@ -202,14 +224,14 @@
             <div class="w-12 h-12 rounded-xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center text-orange-400 mb-6 group-hover:scale-110 transition-transform">
               <i data-lucide="alarm-clock-off" class="w-6 h-6"></i>
             </div>
-            <div class="text-xs font-semibold text-rose-400 mb-1">기존의 문제</div>
-            <h3 class="text-xl font-bold text-white mb-3">고통스러운 기상 알람</h3>
-            <p class="text-slate-400 text-sm leading-relaxed mb-4">
+            <div class="text-xs font-semibold text-rose-400 mb-1" data-i18n="card_tag_problem">기존의 문제</div>
+            <h3 class="text-xl font-bold text-white mb-3" data-i18n="p1_title">고통스러운 기상 알람</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-4" data-i18n="p1_desc">
               신경을 긁는 굉음 알람은 코르티솔 분비를 촉진해 일어난 직후부터 뇌를 방어적이고 지치게 만듭니다.
             </p>
             <div class="pt-4 border-t border-white/[0.06] text-xs font-medium text-amber-300 flex items-center gap-1.5">
               <i data-lucide="check-circle" class="w-4 h-4"></i>
-              <span>dawn4: 뇌파를 깨우는 바이오리듬 페이징</span>
+              <span data-i18n="p1_solution">dawn4: 뇌파를 깨우는 바이오리듬 페이징</span>
             </div>
           </div>
 
@@ -218,14 +240,14 @@
             <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 mb-6 group-hover:scale-110 transition-transform">
               <i data-lucide="help-circle" class="w-6 h-6"></i>
             </div>
-            <div class="text-xs font-semibold text-rose-400 mb-1">기존의 문제</div>
-            <h3 class="text-xl font-bold text-white mb-3">일어나서 뭘 할지 모름</h3>
-            <p class="text-slate-400 text-sm leading-relaxed mb-4">
+            <div class="text-xs font-semibold text-rose-400 mb-1" data-i18n="card_tag_problem">기존의 문제</div>
+            <h3 class="text-xl font-bold text-white mb-3" data-i18n="p2_title">일어나서 뭘 할지 모름</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-4" data-i18n="p2_desc">
               겨우 눈을 떠도 스마트폰 SNS를 켜거나 멍하니 시간을 보내다 결국 다시 잠자리에 드는 악순환이 반복됩니다.
             </p>
             <div class="pt-4 border-t border-white/[0.06] text-xs font-medium text-amber-300 flex items-center gap-1.5">
               <i data-lucide="check-circle" class="w-4 h-4"></i>
-              <span>dawn4: 첫 60초 자동 몰입 플로우 설계</span>
+              <span data-i18n="p2_solution">dawn4: 첫 60초 자동 몰입 플로우 설계</span>
             </div>
           </div>
 
@@ -234,14 +256,14 @@
             <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 mb-6 group-hover:scale-110 transition-transform">
               <i data-lucide="user-x" class="w-6 h-6"></i>
             </div>
-            <div class="text-xs font-semibold text-rose-400 mb-1">기존의 문제</div>
-            <h3 class="text-xl font-bold text-white mb-3">지속되지 않는 외로운 의지</h3>
-            <p class="text-slate-400 text-sm leading-relaxed mb-4">
+            <div class="text-xs font-semibold text-rose-400 mb-1" data-i18n="card_tag_problem">기존의 문제</div>
+            <h3 class="text-xl font-bold text-white mb-3" data-i18n="p3_title">지속되지 않는 외로운 의지</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-4" data-i18n="p3_desc">
               혼자만의 결심은 작심삼일로 끝나기 쉽고, 과도한 인증 카톡방은 피로와 부담을 가중시킵니다.
             </p>
             <div class="pt-4 border-t border-white/[0.06] text-xs font-medium text-amber-300 flex items-center gap-1.5">
               <i data-lucide="check-circle" class="w-4 h-4"></i>
-              <span>dawn4: 조용한 연대감의 사일런트 메이트</span>
+              <span data-i18n="p3_solution">dawn4: 조용한 연대감의 사일런트 메이트</span>
             </div>
           </div>
         </div>
@@ -250,11 +272,11 @@
         <div class="mt-16 p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-dawn-900 via-dawn-850 to-dawn-900 border border-amber-500/20 text-center relative overflow-hidden">
           <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
           <span class="text-4xl text-amber-400/40 font-serif leading-none">“</span>
-          <p class="text-lg sm:text-2xl text-white font-medium leading-relaxed max-w-3xl mx-auto -mt-3">
+          <p class="text-lg sm:text-2xl text-white font-medium leading-relaxed max-w-3xl mx-auto -mt-3" data-i18n-html="vision_quote">
             새벽 4시는 세상의 소음이 잠시 멈추고, <br class="hidden sm:inline" />
             온전히 <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-400 font-bold">내 삶의 주인공</span>으로 설 수 있는 유일한 시간대입니다.
           </p>
-          <div class="mt-6 text-sm text-slate-400 font-normal">
+          <div class="mt-6 text-sm text-slate-400 font-normal" data-i18n="vision_quote_sub">
             주식회사 dawn4가 꿈꾸는 새로운 라이프스타일
           </div>
         </div>
@@ -270,12 +292,12 @@
               <i data-lucide="layers" class="w-3.5 h-3.5"></i>
               <span>PRODUCT TEASER</span>
             </div>
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight" data-i18n-html="solution_heading">
               dawn4가 준비 중인 <br class="sm:hidden" />
               <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-400">핵심 솔루션 4가지</span>
             </h2>
           </div>
-          <p class="text-slate-400 text-sm max-w-md">
+          <p class="text-slate-400 text-sm max-w-md" data-i18n="solution_heading_desc">
             단순 기상 알람 앱을 넘어선, 아침의 시작부터 일상의 몰입까지 관통하는 스마트 모닝 라이프 시스템을 구축하고 있습니다.
           </p>
         </div>
@@ -292,18 +314,18 @@
                 <span class="text-xs font-mono px-3 py-1 rounded-full bg-white/[0.05] text-slate-300 border border-white/10">01 / AWAKE</span>
               </div>
               <h3 class="text-2xl font-bold text-white mb-3">Bio-Rhythm Smart Wake</h3>
-              <p class="text-slate-300 text-base leading-relaxed mb-6">
+              <p class="text-slate-300 text-base leading-relaxed mb-6" data-i18n="pillar1_desc">
                 개인의 렘(REM) 수면과 바이오리듬을 분석하여 수면의 얕은 단계에서 뇌가 거부감 없이 눈을 뜨도록 돕는 감성 사운드 & 조도 엔진.
               </p>
             </div>
             <ul class="space-y-2.5 text-xs sm:text-sm text-slate-400 pt-4 border-t border-white/[0.06]">
               <li class="flex items-center gap-2">
                 <i data-lucide="check" class="w-4 h-4 text-amber-400 shrink-0"></i>
-                <span>무음부터 점진적으로 차오르는 앰비언트 사운드</span>
+                <span data-i18n="pillar1_f1">무음부터 점진적으로 차오르는 앰비언트 사운드</span>
               </li>
               <li class="flex items-center gap-2">
                 <i data-lucide="check" class="w-4 h-4 text-amber-400 shrink-0"></i>
-                <span>억지로 끄는 번거로움 대신 자연스러운 의식 회복 유도</span>
+                <span data-i18n="pillar1_f2">억지로 끄는 번거로움 대신 자연스러운 의식 회복 유도</span>
               </li>
             </ul>
           </div>
@@ -318,18 +340,18 @@
                 <span class="text-xs font-mono px-3 py-1 rounded-full bg-white/[0.05] text-slate-300 border border-white/10">02 / FOCUS</span>
               </div>
               <h3 class="text-2xl font-bold text-white mb-3">Morning Flow Architect</h3>
-              <p class="text-slate-300 text-base leading-relaxed mb-6">
+              <p class="text-slate-300 text-base leading-relaxed mb-6" data-i18n="pillar2_desc">
                 눈을 뜨자마자 무엇을 해야 할지 고민할 필요 없이, 물 한 잔부터 스트레칭, 독서, 프로젝트 작업까지 매끄럽게 연결되는 모닝 플로우.
               </p>
             </div>
             <ul class="space-y-2.5 text-xs sm:text-sm text-slate-400 pt-4 border-t border-white/[0.06]">
               <li class="flex items-center gap-2">
                 <i data-lucide="check" class="w-4 h-4 text-orange-400 shrink-0"></i>
-                <span>의사결정 피로를 없애주는 1-Click 루틴 시퀀스</span>
+                <span data-i18n="pillar2_f1">의사결정 피로를 없애주는 1-Click 루틴 시퀀스</span>
               </li>
               <li class="flex items-center gap-2">
                 <i data-lucide="check" class="w-4 h-4 text-orange-400 shrink-0"></i>
-                <span>스마트폰 방해 요소를 완벽히 차단하는 새벽 몰입 모드</span>
+                <span data-i18n="pillar2_f2">스마트폰 방해 요소를 완벽히 차단하는 새벽 몰입 모드</span>
               </li>
             </ul>
           </div>
@@ -344,18 +366,18 @@
                 <span class="text-xs font-mono px-3 py-1 rounded-full bg-white/[0.05] text-slate-300 border border-white/10">03 / SYNC</span>
               </div>
               <h3 class="text-2xl font-bold text-white mb-3">Silent Accountability</h3>
-              <p class="text-slate-300 text-base leading-relaxed mb-6">
+              <p class="text-slate-300 text-base leading-relaxed mb-6" data-i18n="pillar3_desc">
                 말 한마디 오가지 않아도 같은 시각 깨어있는 전 세계 러너들의 등불이 은은하게 켜지며 느껴지는 고요하고 강력한 페이스메이커 연대감.
               </p>
             </div>
             <ul class="space-y-2.5 text-xs sm:text-sm text-slate-400 pt-4 border-t border-white/[0.06]">
               <li class="flex items-center gap-2">
                 <i data-lucide="check" class="w-4 h-4 text-indigo-400 shrink-0"></i>
-                <span>소음과 비교 스트레스 없는 순수 존재 확인형 메이트</span>
+                <span data-i18n="pillar3_f1">소음과 비교 스트레스 없는 순수 존재 확인형 메이트</span>
               </li>
               <li class="flex items-center gap-2">
                 <i data-lucide="check" class="w-4 h-4 text-indigo-400 shrink-0"></i>
-                <span>새벽 4시 실시간 글로벌 라이브 램프 인터랙션</span>
+                <span data-i18n="pillar3_f2">새벽 4시 실시간 글로벌 라이브 램프 인터랙션</span>
               </li>
             </ul>
           </div>
@@ -370,18 +392,18 @@
                 <span class="text-xs font-mono px-3 py-1 rounded-full bg-white/[0.05] text-slate-300 border border-white/10">04 / INTELLIGENCE</span>
               </div>
               <h3 class="text-2xl font-bold text-white mb-3">AI Routine Analytics</h3>
-              <p class="text-slate-300 text-base leading-relaxed mb-6">
+              <p class="text-slate-300 text-base leading-relaxed mb-6" data-i18n="pillar4_desc">
                 단순 달력 체크가 아닌, 아침의 1시간이 하루 전체의 에너지 레벨과 업무 집중도에 미치는 상관관계를 인공지능이 분석해 제안합니다.
               </p>
             </div>
             <ul class="space-y-2.5 text-xs sm:text-sm text-slate-400 pt-4 border-t border-white/[0.06]">
               <li class="flex items-center gap-2">
                 <i data-lucide="check" class="w-4 h-4 text-rose-400 shrink-0"></i>
-                <span>나만의 바이오리듬 최적 기상 시간 자동 보정</span>
+                <span data-i18n="pillar4_f1">나만의 바이오리듬 최적 기상 시간 자동 보정</span>
               </li>
               <li class="flex items-center gap-2">
                 <i data-lucide="check" class="w-4 h-4 text-rose-400 shrink-0"></i>
-                <span>성취를 한눈에 보는 월간 모닝 성장 보고서</span>
+                <span data-i18n="pillar4_f2">성취를 한눈에 보는 월간 모닝 성장 보고서</span>
               </li>
             </ul>
           </div>
@@ -391,9 +413,9 @@
         <div class="mt-12 text-center p-8 rounded-2xl bg-white/[0.02] border border-white/[0.06]">
           <div class="inline-flex items-center gap-2 text-amber-400 text-sm font-semibold mb-2">
             <i data-lucide="info" class="w-4 h-4"></i>
-            <span>사전 예약 안내</span>
+            <span data-i18n="preorder_notice_title">사전 예약 안내</span>
           </div>
-          <p class="text-slate-400 text-sm max-w-xl mx-auto">
+          <p class="text-slate-400 text-sm max-w-xl mx-auto" data-i18n="preorder_notice_desc">
             프로덕트의 프로토타입 검증 및 클로즈드 알파 테스트가 마무리되는 대로 공식 사전 예약과 얼리버드 혜택을 오픈할 예정입니다. 조금만 기다려 주세요!
           </p>
         </div>
@@ -405,15 +427,15 @@
       <div class="max-w-6xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div class="lg:col-span-6">
-            <span class="text-xs font-bold tracking-widest text-amber-400 uppercase">About dawn4 Inc.</span>
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3 mb-6 tracking-tight leading-snug">
+            <span class="text-xs font-bold tracking-widest text-amber-400 uppercase" data-i18n="about_tag">About dawn4 Inc.</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3 mb-6 tracking-tight leading-snug" data-i18n-html="about_title">
               우리는 사람의 잠재력이 깨어나는 <br />
               <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-orange-400 to-rose-400">새벽의 힘을 믿습니다</span>
             </h2>
-            <p class="text-slate-300 text-base leading-relaxed mb-6">
+            <p class="text-slate-300 text-base leading-relaxed mb-6" data-i18n="about_desc1">
               주식회사 dawn4는 인간의 가장 창의적이고 맑은 에너지가 발현되는 순간을 탐구하는 라이프테크(Life-Tech) 스타트업입니다.
             </p>
-            <p class="text-slate-400 text-sm leading-relaxed mb-8">
+            <p class="text-slate-400 text-sm leading-relaxed mb-8" data-i18n="about_desc2">
               단순히 잠을 줄이라는 비현실적인 갓생을 강요하지 않습니다. 충분한 휴식과 건강한 수면을 전제로, 나만의 소중한 시간을 온전히 확보하여 삶의 주도권을 되찾아 드리는 기술과 문화를 만듭니다.
             </p>
 
@@ -424,8 +446,8 @@
                   <i data-lucide="eye" class="w-4 h-4"></i>
                 </div>
                 <div>
-                  <h4 class="text-white text-base font-semibold">Clarity (명료함)</h4>
-                  <p class="text-xs text-slate-400">방해 없는 새벽, 복잡한 생각을 비우고 오늘 하루의 본질에 집중합니다.</p>
+                  <h4 class="text-white text-base font-semibold" data-i18n="val1_title">Clarity (명료함)</h4>
+                  <p class="text-xs text-slate-400" data-i18n="val1_desc">방해 없는 새벽, 복잡한 생각을 비우고 오늘 하루의 본질에 집중합니다.</p>
                 </div>
               </div>
 
@@ -434,8 +456,8 @@
                   <i data-lucide="repeat" class="w-4 h-4"></i>
                 </div>
                 <div>
-                  <h4 class="text-white text-base font-semibold">Sustainability (지속가능성)</h4>
-                  <p class="text-xs text-slate-400">무리한 의지가 아닌 몸과 마음에 무리가 없는 라이프 사이클 루틴을 설계합니다.</p>
+                  <h4 class="text-white text-base font-semibold" data-i18n="val2_title">Sustainability (지속가능성)</h4>
+                  <p class="text-xs text-slate-400" data-i18n="val2_desc">무리한 의지가 아닌 몸과 마음에 무리가 없는 라이프 사이클 루틴을 설계합니다.</p>
                 </div>
               </div>
 
@@ -444,8 +466,8 @@
                   <i data-lucide="heart" class="w-4 h-4"></i>
                 </div>
                 <div>
-                  <h4 class="text-white text-base font-semibold">Calm Focus (고요한 몰입)</h4>
-                  <p class="text-xs text-slate-400">소음과 자극으로 가득 찬 세상에서 나만의 평화와 깊은 성장을 누립니다.</p>
+                  <h4 class="text-white text-base font-semibold" data-i18n="val3_title">Calm Focus (고요한 몰입)</h4>
+                  <p class="text-xs text-slate-400" data-i18n="val3_desc">소음과 자극으로 가득 찬 세상에서 나만의 평화와 깊은 성장을 누립니다.</p>
                 </div>
               </div>
             </div>
@@ -455,30 +477,30 @@
           <div class="lg:col-span-6">
             <div class="p-8 sm:p-10 rounded-3xl bg-gradient-to-b from-dawn-800/90 to-dawn-900/90 border border-white/[0.1] shadow-2xl relative">
               <div class="text-xs font-mono text-amber-400 tracking-wider uppercase mb-2">dawn4 Corporate Identity</div>
-              <div class="text-2xl font-bold text-white mb-6">주식회사 dawn4 (dawn4 Inc.)</div>
+              <div class="text-2xl font-bold text-white mb-6" data-i18n="co_name_header">주식회사 dawn4 (dawn4 Inc.)</div>
 
               <div class="space-y-4 text-sm">
                 <div class="flex justify-between py-3 border-b border-white/[0.06]">
-                  <span class="text-slate-400">회사명</span>
-                  <span class="text-white font-medium">주식회사 dawn4 (dawn4 Inc.)</span>
+                  <span class="text-slate-400" data-i18n="co_label_name">회사명</span>
+                  <span class="text-white font-medium" data-i18n="co_val_name">주식회사 dawn4 (dawn4 Inc.)</span>
                 </div>
                 <div class="flex justify-between py-3 border-b border-white/[0.06]">
-                  <span class="text-slate-400">설립 목적</span>
-                  <span class="text-white font-medium">미라클 모닝 & 라이프테크 솔루션 연구개발</span>
+                  <span class="text-slate-400" data-i18n="co_label_purpose">설립 목적</span>
+                  <span class="text-white font-medium" data-i18n="co_val_purpose">미라클 모닝 & 라이프테크 솔루션 연구개발</span>
                 </div>
                 <div class="flex justify-between py-3 border-b border-white/[0.06]">
-                  <span class="text-slate-400">핵심 프로덕트</span>
-                  <span class="text-amber-300 font-medium">dawn4 Miracle Morning Solution (출시 예정)</span>
+                  <span class="text-slate-400" data-i18n="co_label_product">핵심 프로덕트</span>
+                  <span class="text-amber-300 font-medium" data-i18n="co_val_product">dawn4 Miracle Morning Solution (출시 예정)</span>
                 </div>
                 <div class="flex justify-between py-3 border-b border-white/[0.06]">
-                  <span class="text-slate-400">비전 슬로건</span>
+                  <span class="text-slate-400" data-i18n="co_label_slogan">비전 슬로건</span>
                   <span class="text-white font-medium">"From Silence to Miracle"</span>
                 </div>
                 <div class="flex justify-between py-3">
-                  <span class="text-slate-400">현재 상태</span>
+                  <span class="text-slate-400" data-i18n="co_label_status">현재 상태</span>
                   <span class="inline-flex items-center gap-1.5 text-emerald-400 font-medium">
                     <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-                    프로덕트 기획 및 프로토타입 R&D
+                    <span data-i18n="co_val_status">프로덕트 기획 및 프로토타입 R&D</span>
                   </span>
                 </div>
               </div>
@@ -486,11 +508,11 @@
               <!-- Dawn Atmosphere Graphic -->
               <div class="mt-8 p-5 rounded-2xl bg-dawn-950/80 border border-white/[0.08] flex items-center justify-between">
                 <div>
-                  <div class="text-xs text-slate-400 font-medium">Target Morning Hour</div>
+                  <div class="text-xs text-slate-400 font-medium" data-i18n="co_stat_target_label">Target Morning Hour</div>
                   <div class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-rose-400 font-mono">04:00 AM</div>
                 </div>
                 <div class="text-right">
-                  <div class="text-xs text-slate-400 font-medium">Daily Focus Potential</div>
+                  <div class="text-xs text-slate-400 font-medium" data-i18n="co_stat_focus_label">Daily Focus Potential</div>
                   <div class="text-sm font-semibold text-white">+120 Min / Day</div>
                 </div>
               </div>
@@ -504,11 +526,11 @@
     <section id="roadmap" class="py-24 px-6 bg-dawn-900/40 border-t border-white/[0.06]">
       <div class="max-w-5xl mx-auto">
         <div class="text-center max-w-2xl mx-auto mb-16">
-          <span class="text-xs font-bold tracking-widest text-amber-400 uppercase">Product Journey</span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3 mb-4 tracking-tight">
+          <span class="text-xs font-bold tracking-widest text-amber-400 uppercase" data-i18n="roadmap_tag">Product Journey</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3 mb-4 tracking-tight" data-i18n="roadmap_title">
             2026 로드맵
           </h2>
-          <p class="text-slate-400 text-sm">
+          <p class="text-slate-400 text-sm" data-i18n="roadmap_desc">
             dawn4가 단계별로 만들어가는 미라클 모닝 생태계의 여정을 공유합니다.
           </p>
         </div>
@@ -518,8 +540,8 @@
           <div class="relative pl-8 md:pl-12">
             <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-amber-400 ring-4 ring-dawn-950"></div>
             <div class="text-xs font-mono text-amber-400 font-semibold mb-1">PHASE 01 • NOW</div>
-            <h3 class="text-xl font-bold text-white mb-2">dawn4 법인 설립 & 솔루션 코어 설계</h3>
-            <p class="text-slate-300 text-sm leading-relaxed max-w-2xl">
+            <h3 class="text-xl font-bold text-white mb-2" data-i18n="step1_title">dawn4 법인 설립 & 솔루션 코어 설계</h3>
+            <p class="text-slate-300 text-sm leading-relaxed max-w-2xl" data-i18n="step1_desc">
               브랜드 아이덴티티 확립, 수면 과학 및 기상 심리학 연구, 1차 인터랙티브 프로토타입 검증 단계 진행 중.
             </p>
           </div>
@@ -528,8 +550,8 @@
           <div class="relative pl-8 md:pl-12">
             <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-600 ring-4 ring-dawn-950"></div>
             <div class="text-xs font-mono text-slate-400 font-semibold mb-1">PHASE 02 • UPCOMING</div>
-            <h3 class="text-xl font-bold text-white mb-2">비공개 클로즈드 알파 & 얼리액세스 오픈</h3>
-            <p class="text-slate-400 text-sm leading-relaxed max-w-2xl">
+            <h3 class="text-xl font-bold text-white mb-2" data-i18n="step2_title">비공개 클로즈드 알파 & 얼리액세스 오픈</h3>
+            <p class="text-slate-400 text-sm leading-relaxed max-w-2xl" data-i18n="step2_desc">
               초기 테스터 그룹 대상의 클로즈드 테스트 진행 및 본 사이트를 통한 공식 사전 예약 개시 예정.
             </p>
           </div>
@@ -538,8 +560,8 @@
           <div class="relative pl-8 md:pl-12">
             <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-600 ring-4 ring-dawn-950"></div>
             <div class="text-xs font-mono text-slate-400 font-semibold mb-1">PHASE 03 • FUTURE</div>
-            <h3 class="text-xl font-bold text-white mb-2">dawn4 공식 런칭 & 글로벌 모닝 커뮤니티</h3>
-            <p class="text-slate-400 text-sm leading-relaxed max-w-2xl">
+            <h3 class="text-xl font-bold text-white mb-2" data-i18n="step3_title">dawn4 공식 런칭 & 글로벌 모닝 커뮤니티</h3>
+            <p class="text-slate-400 text-sm leading-relaxed max-w-2xl" data-i18n="step3_desc">
               iOS 및 Android 앱 공식 스토어 출시, 글로벌 사일런트 메이트 네트워크 확장 및 AI 루틴 코칭 고도화.
             </p>
           </div>
@@ -557,10 +579,10 @@
             <i data-lucide="mail" class="w-7 h-7"></i>
           </div>
 
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4 tracking-tight">
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4 tracking-tight" data-i18n="contact_title">
             새벽을 바꾸는 여정에 함께하세요
           </h2>
-          <p class="text-slate-300 text-sm sm:text-base max-w-xl mx-auto mb-8 leading-relaxed">
+          <p class="text-slate-300 text-sm sm:text-base max-w-xl mx-auto mb-8 leading-relaxed" data-i18n-html="contact_desc">
             dawn4와의 비즈니스 파트너십, 투자, 채용 및 기타 문의사항은<br class="hidden sm:inline" />
             아래 공식 이메일 채널을 통해 언제든 연락해 주시기 바랍니다.
           </p>
@@ -570,11 +592,11 @@
             <span class="text-white font-mono text-sm tracking-wide" id="contactEmail">contact@dawn4.com</span>
             <button id="copyEmailBtn" class="w-full sm:w-auto px-4 py-2 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-white text-xs font-bold transition-all flex items-center justify-center gap-1.5 shadow-lg shadow-orange-500/20">
               <i data-lucide="copy" class="w-3.5 h-3.5" id="copyIcon"></i>
-              <span id="copyBtnText">이메일 복사</span>
+              <span id="copyBtnText" data-i18n="btn_copy_email">이메일 복사</span>
             </button>
           </div>
 
-          <div class="mt-8 text-xs text-slate-500">
+          <div class="mt-8 text-xs text-slate-500" data-i18n="contact_note">
             * 사전 예약 및 서비스 신청 폼은 추후 프로덕트 공개 시점에 별도 오픈됩니다.
           </div>
         </div>
@@ -589,14 +611,14 @@
         <div class="w-6 h-6 rounded-lg bg-orange-500/20 flex items-center justify-center text-amber-400 font-bold text-xs">4</div>
         <span class="text-slate-300 font-bold tracking-tight">dawn4 Inc.</span>
         <span class="text-slate-600">|</span>
-        <span>The Miracle Morning Life-Tech Company</span>
+        <span data-i18n="footer_tagline">The Miracle Morning Life-Tech Company</span>
       </div>
 
       <div class="flex items-center gap-6">
-        <a href="#vision" class="hover:text-slate-300 transition-colors">비전</a>
-        <a href="#solution" class="hover:text-slate-300 transition-colors">솔루션</a>
-        <a href="#about" class="hover:text-slate-300 transition-colors">회사소개</a>
-        <a href="#contact" class="hover:text-slate-300 transition-colors">문의</a>
+        <a href="#vision" class="hover:text-slate-300 transition-colors" data-i18n="footer_vision">비전</a>
+        <a href="#solution" class="hover:text-slate-300 transition-colors" data-i18n="footer_solution">솔루션</a>
+        <a href="#about" class="hover:text-slate-300 transition-colors" data-i18n="footer_about">회사소개</a>
+        <a href="#contact" class="hover:text-slate-300 transition-colors" data-i18n="footer_contact">문의</a>
       </div>
 
       <p class="text-center md:text-right">
