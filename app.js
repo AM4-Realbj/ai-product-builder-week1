@@ -10,6 +10,7 @@ const translations = {
     nav_calculator: "수면 계산기",
     nav_about: "회사 소개",
     nav_insights: "인사이트",
+    nav_blog: "블로그",
     nav_roadmap: "로드맵",
     nav_contact: "문의하기",
     nav_status: "프로덕트 준비 중 (Coming Soon)",
@@ -161,6 +162,7 @@ const translations = {
     // Footer
     footer_tagline: "The Miracle Morning Life-Tech Company",
     footer_insights: "모닝 인사이트",
+    footer_blog: "블로그",
     footer_vision: "비전",
     footer_solution: "솔루션",
     footer_about: "회사소개",
@@ -188,6 +190,7 @@ const translations = {
     nav_calculator: "Sleep Calculator",
     nav_about: "About Us",
     nav_insights: "Insights",
+    nav_blog: "Blog",
     nav_roadmap: "Roadmap",
     nav_contact: "Contact",
     nav_status: "Product in Development (Coming Soon)",
@@ -339,6 +342,7 @@ const translations = {
     // Footer
     footer_tagline: "The Miracle Morning Life-Tech Company",
     footer_insights: "Morning Insights",
+    footer_blog: "Blog",
     footer_vision: "Vision",
     footer_solution: "Solution",
     footer_about: "About",
